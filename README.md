@@ -34,7 +34,7 @@ A testing engine for validating investment factors before deployment.
 
 ---
 
-### 🔭 What I'm Building Now
+### 🔭 What I'm Working On (AI Training & Evaluation)
 
 I am currently focused on **RLHF (Reinforcement Learning from Human Feedback)** workflows to teach LLMs "Institutional Reasoning."
 
@@ -46,15 +46,16 @@ A multi-agent system where two LLMs (Long vs. Short) debate the same 10-K data.
 
 #### 2. `financial-cot-dataset` (Reasoning Chains)
 **Status:** *Data Curation*
-Building a "Gold Standard" dataset for financial logic.
+Building a "Gold Standard" dataset for financial logic and decision-making.
 * **Goal:** Create high-quality **Chain-of-Thought (CoT)** examples for Supervised Fine-Tuning (SFT).
-* **Focus:** Explicitly documenting the "Analyst Workflow" (e.g., EBITDA adjustments, normalizing seasonality) to improve model reasoning capabilities.
+* **Focus:** Documenting the full investment lifecycle:
+    * **Analyst Workflow:** Data normalization, EBITDA adjustments, and competitive benchmarking.
+    * **PM Workflow:** Position sizing logic, risk budgeting, portfolio construction, and "Kill Criteria" execution.
 
 #### 3. `earnings-call-interrogator` (Nuance Detection)
 **Status:** *Prototyping*
 An NLP engine designed to detect "Non-Answers" and linguistic evasion in management transcripts.
 * **Goal:** Train models to identify subtext, hesitation, and sentiment shifts, rather than just summarizing text.
----
 
 ### 📫 Connect with Me
 * [LinkedIn](www.linkedin.com/in/brad-schonhoft-cfa)
