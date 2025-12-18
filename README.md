@@ -1,30 +1,54 @@
-# Hi there, I'm Brad 👋
+# Hi there, 👋
 ### Investment Professional & Python Developer
 
-Bridging the gap between **Institutional Finance** and **Production-Grade AI**. 
+Bridging the gap between **Institutional Finance** and **Production-Grade AI**.
 I focus on translating discretionary investment logic into reproducible, autonomous software agents.
 
 ---
 
-### 🚀 Featured Projects
+### 🏛️ Core Applications (The "Buy Side" Stack)
+*Tools designed to automate and augment the institutional investment process.*
 
-#### 1. The Long/Short Arena (Agentic Reasoning)
+#### 1. The Long/Short Arena (Deep Reasoning)
 **[View Repository](https://github.com/bdschi1/llm-long-short-arena)**
-*The "Repository We Just Built"* — An autonomous multi-agent system where a Bull and Bear PM debate research documents, adjudicated by a CIO agent.
-* **The "Alpha":** Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains before a verdict.
+An autonomous multi-agent system where a Bull and Bear PM debate research documents, adjudicated by a CIO agent.
+* **The "Alpha":** Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains.
 * **Key Tech:** Multi-Agent Systems, Chain-of-Thought (CoT), Streamlit, OpenAI API.
 
 #### 2. The AI Investment Committee (Qualitative)
 **[View Repository](https://github.com/bdschi1/equity-research-scorer)**
-*The "Digital Portfolio Manager"* — An automated engine that reads, grades, and validates investment research notes.
-* **The "Alpha":** Quantifies the "Variant View" in unstructured text and standardizes conviction across analysts.
+An automated "Digital Portfolio Manager" that reads, grades, and validates investment research notes against a standardized rubric.
+* **The "Alpha":** Quantifies the "Variant View" in unstructured text and detects consensus-hugging.
 * **Key Tech:** Pydantic (Structured Outputs), OpenAI (GPT-4o), SEC/Yahoo APIs.
 
 #### 3. Backtest Factor Clinic (Quantitative)
 **[View Repository](https://github.com/bdschi1/backtest-factor-clinic)**
-*The "Stress Test"* — A modular clinic for validating investment factors before they touch live capital.
+A modular clinic for validating investment factors before they touch live capital.
 * **The "Alpha":** Prevents overfitting by subjecting signals to regime changes, decay analysis, and transaction cost stress-tests.
-* **Key Tech:** Python (Pandas/NumPy), Vectorbt / Zipline, Statistical Analysis.
+* **Key Tech:** Python (Pandas/NumPy), Vectorbt, Statistical Analysis.
+
+---
+
+### 🧬 AI Engineering & Ops (The "Model" Stack)
+*Infrastructure for creating, training, and vetting financial domain models.*
+
+#### 4. Financial RLHF Studio (Data Engine)
+**[View Repository](https://github.com/bdschi1/financial-rlhf-studio)**
+A "Human-in-the-Loop" labeling interface for capturing domain expertise to train financial LLMs.
+* **The Workflow:** Generates "Draft vs. Expert" pairs to create DPO (Direct Preference Optimization) datasets.
+* **Goal:** Solving the "Generic Finance" problem by capturing specific institutional nuance for fine-tuning.
+
+#### 5. Async Model Trainer (Infrastructure)
+**[View Repository](https://github.com/bdschi1/async-model-trainer)**
+A scalable backend pipeline that automates the fine-tuning lifecycle.
+* **The Workflow:** Monitors the RLHF Studio for new labeled data thresholds -> Triggers cloud GPU jobs -> Deploys new LoRA adapters.
+* **Key Tech:** Asynchronous Queues (Celery/Redis), Cloud GPU APIs (Lambda/RunPod), PEFT/LoRA.
+
+#### 6. Dynamic Thesis Vetter (Agentic RAG)
+**[View Repository](https://github.com/bdschi1/dynamic-thesis-vetter)**
+An "Active Interviewer" agent that interrogates investment memos rather than just summarizing them.
+* **The Workflow:** Identifies logical gaps in a thesis -> Generates probing questions -> Searches the document to test robustness.
+* **Key Tech:** LangGraph (State Management), Advanced RAG, Dynamic Prompting.
 
 ---
 
@@ -33,18 +57,11 @@ I focus on translating discretionary investment logic into reproducible, autonom
 | Category | Tools |
 | :--- | :--- |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white) |
-| **AI & LLMs** | ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white) ![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-Structured-orange) |
-| **Data & Finance** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![SEC Edgar](https://img.shields.io/badge/SEC_EDGAR-API-green) |
-| **Engineering** | ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![CI/CD](https://img.shields.io/badge/CI%2FCD-Actions-blue) |
+| **AI & LLMs** | ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white) ![RLHF](https://img.shields.io/badge/RLHF-DPO-green) |
+| **Data & Finance** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![VectorBT](https://img.shields.io/badge/VectorBT-Quant-blue) |
+| **Engineering** | ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) |
 
 ---
-
-### 🔭 Research & datasets
-
-Beyond the code, I am curating data to improve how LLMs handle financial nuance.
-
-* **`financial-cot-dataset`**: Building a "Gold Standard" dataset for financial logic (EBITDA adjustments, "Kill Criteria" execution) to improve Supervised Fine-Tuning (SFT).
-* **`earnings-call-interrogator`**: Prototyping an NLP engine to detect "Non-Answers" and linguistic evasion in management transcripts.
 
 ### 📫 Connect with Me
 * [LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
