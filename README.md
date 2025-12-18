@@ -8,18 +8,23 @@ I focus on translating discretionary investment logic into reproducible, autonom
 
 ### 🚀 Featured Projects
 
-#### 1. The AI Investment Committee (Qualitative)
-**[View Repository](https://github.com/bdschi1/equity-research-scorer)**
-An autonomous "Digital Portfolio Manager" that reads, grades, and validates investment research. 
-* **Key Tech:** OpenAI (GPT-4o), Streamlit, Pydantic, SEC/Yahoo APIs.
-* **The "Alpha":** Quantifies the "Variant View" in unstructured text.
+#### 1. The Long/Short Arena (Agentic Reasoning)
+**[View Repository](https://github.com/bdschi1/llm-long-short-arena)**
+*The "Repository We Just Built"* — An autonomous multi-agent system where a Bull and Bear PM debate research documents, adjudicated by a CIO agent.
+* **The "Alpha":** Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains before a verdict.
+* **Key Tech:** Multi-Agent Systems, Chain-of-Thought (CoT), Streamlit, OpenAI API.
 
-#### 2. Backtest Factor Clinic (Quantitative)
+#### 2. The AI Investment Committee (Qualitative)
+**[View Repository](https://github.com/bdschi1/equity-research-scorer)**
+*The "Digital Portfolio Manager"* — An automated engine that reads, grades, and validates investment research notes.
+* **The "Alpha":** Quantifies the "Variant View" in unstructured text and standardizes conviction across analysts.
+* **Key Tech:** Pydantic (Structured Outputs), OpenAI (GPT-4o), SEC/Yahoo APIs.
+
+#### 3. Backtest Factor Clinic (Quantitative)
 **[View Repository](https://github.com/bdschi1/backtest-factor-clinic)**
-A testing engine for validating investment factors before deployment.
-* **The Problem:** Most backtests are overfitted and fail out-of-sample.
-* **The Solution:** A modular "clinic" that stress-tests signal decay, regime changes, and transaction costs.
-* **Key Tech:** Python (Pandas/NumPy), Vectorbt / Zipline (assuming), Statistical Analysis.
+*The "Stress Test"* — A modular clinic for validating investment factors before they touch live capital.
+* **The "Alpha":** Prevents overfitting by subjecting signals to regime changes, decay analysis, and transaction cost stress-tests.
+* **Key Tech:** Python (Pandas/NumPy), Vectorbt / Zipline, Statistical Analysis.
 
 ---
 
@@ -34,29 +39,13 @@ A testing engine for validating investment factors before deployment.
 
 ---
 
-### 🔭 What I'm Working On (AI Training & Evaluation)
+### 🔭 Research & datasets
 
-I am currently focused on **RLHF (Reinforcement Learning from Human Feedback)** workflows to teach LLMs "Institutional Reasoning."
+Beyond the code, I am curating data to improve how LLMs handle financial nuance.
 
-#### 1. `bull-bear-arena` (Adversarial Agents)
-**Status:** *In Development*
-A multi-agent system where two LLMs (Long vs. Short) debate the same 10-K data.
-* **Goal:** Mitigate confirmation bias by forcing models to argue mutually exclusive theses.
-* **Technique:** Adversarial prompting and "Judge-in-the-Loop" evaluation.
-
-#### 2. `financial-cot-dataset` (Reasoning Chains)
-**Status:** *Data Curation*
-Building a "Gold Standard" dataset for financial logic and decision-making.
-* **Goal:** Create high-quality **Chain-of-Thought (CoT)** examples for Supervised Fine-Tuning (SFT).
-* **Focus:** Documenting the full investment lifecycle:
-    * **Analyst Workflow:** Data normalization, EBITDA adjustments, and competitive benchmarking.
-    * **PM Workflow:** Position sizing logic, risk budgeting, portfolio construction, and "Kill Criteria" execution.
-
-#### 3. `earnings-call-interrogator` (Nuance Detection)
-**Status:** *Prototyping*
-An NLP engine designed to detect "Non-Answers" and linguistic evasion in management transcripts.
-* **Goal:** Train models to identify subtext, hesitation, and sentiment shifts, rather than just summarizing text.
+* **`financial-cot-dataset`**: Building a "Gold Standard" dataset for financial logic (EBITDA adjustments, "Kill Criteria" execution) to improve Supervised Fine-Tuning (SFT).
+* **`earnings-call-interrogator`**: Prototyping an NLP engine to detect "Non-Answers" and linguistic evasion in management transcripts.
 
 ### 📫 Connect with Me
-* [LinkedIn](www.linkedin.com/in/brad-schonhoft-cfa)
+* [LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
 * [Email](mailto:bdschi1@protonmail.com)
