@@ -3,118 +3,119 @@
 ## Investment Professional & Python Developer
 
 Bridging the gap between **Institutional Finance** and **Production-Grade AI**.
-I focus on translating discretionary investment logic into reproducible, autonomous software agents.
+I translate discretionary investment logic into **reproducible, autonomous software agents**.
 
 ---
 
-## 🏛️ Core Applications (The “Buy Side” Stack)
+## 🏛️ Core Applications — Buy-Side Stack
 
 Tools designed to automate and augment the institutional investment process.
 
 ---
 
-### **The Long/Short Arena (Deep Reasoning)**
+### 🔹 Long/Short Arena — *Deep Reasoning*
 
-**View Repository**
+**Repository:**
+👉 [https://github.com/bdschi1/llm-long-short-arena](https://github.com/bdschi1/llm-long-short-arena)
 
 An autonomous multi-agent system where **Bull** and **Bear PMs** debate research documents, adjudicated by a **CIO agent**.
 
-**The Alpha**
-Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains.
+* **Alpha:** Forces mutually exclusive reasoning paths to mitigate confirmation bias
+* **Focus:** Decision robustness under adversarial reasoning
 
-**Key Tech:**
-Multi-Agent Systems, Chain-of-Thought (CoT), Streamlit, OpenAI API
-
----
-
-### **The AI Investment Committee (Qualitative)**
-
-**View Repository**
-
-An automated **Digital Portfolio Manager** that reads, grades, and validates investment research notes against a standardized rubric.
-
-**The Alpha**
-Quantifies the *variant view* in unstructured text and detects consensus-hugging.
-
-**Key Tech:**
-Pydantic (Structured Outputs), OpenAI (GPT-4o), SEC & Yahoo APIs
+**Tech:** Multi-Agent Systems · Chain-of-Thought · Streamlit · OpenAI API
 
 ---
 
-### **Backtest Factor Clinic (Quantitative)**
+### 🔹 AI Investment Committee — *Qualitative*
 
-**View Repository**
+**Repository:**
+👉 [https://github.com/bdschi1/equity-research-scorer](https://github.com/bdschi1/equity-research-scorer)
+
+An automated **Digital Portfolio Manager** that reads, grades, and validates investment research against a standardized rubric.
+
+* **Alpha:** Quantifies the *variant view* in unstructured text
+* **Use Case:** Detects consensus-hugging and weak differentiation
+
+**Tech:** Pydantic · OpenAI (GPT-4o) · SEC & Yahoo APIs
+
+---
+
+### 🔹 Backtest Factor Clinic — *Quantitative*
+
+**Repository:**
+👉 [https://github.com/bdschi1/backtest-factor-clinic](https://github.com/bdschi1/backtest-factor-clinic)
 
 A modular clinic for validating investment factors before they touch live capital.
 
-**The Alpha**
-Prevents overfitting by subjecting signals to regime changes, decay analysis, and transaction-cost stress tests.
+* **Alpha:** Stress-tests signals across regimes, decay, and transaction costs
+* **Focus:** Overfitting prevention and factor hygiene
 
-**Key Tech:**
-Python (Pandas, NumPy), Vectorbt, Statistical Analysis
+**Tech:** Python (Pandas, NumPy) · VectorBT · Statistical Analysis
 
 ---
 
-## 🧬 AI Engineering & Ops (The “Model” Stack)
+## 🧬 AI Engineering & Ops — Model Stack
 
 Infrastructure for creating, training, and vetting financial-domain models.
 
 ---
 
-### **Financial RLHF Studio (Data Engine)**
+### 🔹 Financial RLHF Studio — *Data Engine*
 
-**View Repository**
+**Repository:**
+👉 [https://github.com/bdschi1/financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)
 
-A **human-in-the-loop** labeling interface for capturing domain expertise to train financial LLMs.
+A **human-in-the-loop** labeling interface for capturing institutional expertise.
 
-**Workflow**
-Generates *Draft vs. Expert* pairs to create **DPO (Direct Preference Optimization)** datasets.
+* **Workflow:** Draft vs. Expert pairs → DPO datasets
+* **Goal:** Encode institutional nuance beyond “generic finance”
 
-**Goal**
-Solve the “generic finance” problem by capturing institutional nuance for fine-tuning.
+**Focus:** Preference data generation for fine-tuning financial LLMs
 
 ---
 
-### **Async Model Trainer (Infrastructure)**
+### 🔹 Async Model Trainer — *Infrastructure*
 
-**View Repository**
+**Repository:**
+👉 [https://github.com/bdschi1/async-model-trainer](https://github.com/bdschi1/async-model-trainer)
 
 A production-grade microservices architecture for scalable LLM fine-tuning.
 
-**Architecture**
-Decouples the **Control Plane** (FastAPI / Streamlit) from the **Compute Plane** (GPU workers) via a Redis message broker.
+* **Architecture:** Control Plane ↔ Compute Plane via Redis
+* **Design:** Horizontally scalable, GPU-aware workers
 
-**Key Tech:**
-Celery (Async Queues), FastAPI, Unsloth (LLaMA-3 Optimization), Docker Compose
+**Tech:** Celery · FastAPI · Unsloth (LLaMA-3) · Docker Compose
 
 ---
 
-### **Dynamic Thesis Vetter (Agentic RAG)**
+### 🔹 Dynamic Thesis Vetter — *Agentic RAG*
 
-**View Repository**
+**Repository:**
+👉 *Link TBD*
 
-An **active interviewer** agent that interrogates investment memos rather than summarizing them.
+An **active interviewer** agent that interrogates investment memos instead of summarizing them.
 
-**Workflow**
-Identifies logical gaps → generates probing questions → searches source documents to test robustness.
+* Identifies logical gaps
+* Generates probing questions
+* Searches source documents to test thesis robustness
 
-**Key Tech:**
-LangGraph (State Management), Advanced RAG, Dynamic Prompting
+**Tech:** LangGraph · Advanced RAG · Dynamic Prompting
 
 ---
 
 ## 🛠️ Technical Stack
 
-| Category           | Tools                   |
-| ------------------ | ----------------------- |
-| **Languages**      | Python, SQL             |
-| **AI & LLMs**      | OpenAI, LangChain, RLHF |
-| **Data & Finance** | Pandas, VectorBT        |
-| **Engineering**    | Git, Streamlit, Docker  |
+| Category           | Tools                     |
+| ------------------ | ------------------------- |
+| **Languages**      | Python · SQL              |
+| **AI & LLMs**      | OpenAI · LangChain · RLHF |
+| **Data & Finance** | Pandas · VectorBT         |
+| **Engineering**    | Git · Streamlit · Docker  |
 
 ---
 
-## 📫 Connect with Me
+## 📫 Connect
 
-* **LinkedIn**
-* **Email**
+* **LinkedIn:** [https://www.linkedin.com/in/brad-schonhoft-cfa](https://www.linkedin.com/in/brad-schonhoft-cfa)
+* **Email:** [mailto@protonmail.com](mailto:mailto@protonmail.com)
