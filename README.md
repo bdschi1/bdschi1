@@ -1,55 +1,71 @@
-# Hi there, 👋
-### Investment Professional & Python Developer
+Hi there, 👋
 
-Bridging the gap between **Institutional Finance** and **Production-Grade AI**.
+Investment Professional & Python Developer
+
+Bridging the gap between Institutional Finance and Production-Grade AI.
 I focus on translating discretionary investment logic into reproducible, autonomous software agents.
 
----
+🏛️ Core Applications (The "Buy Side" Stack)
 
-### 🏛️ Core Applications (The "Buy Side" Stack)
-*Tools designed to automate and augment the institutional investment process.*
+Tools designed to automate and augment the institutional investment process.
 
-#### 1. The Long/Short Arena (Deep Reasoning)
-**[View Repository](https://github.com/bdschi1/llm-long-short-arena)**
+1. The Long/Short Arena (Deep Reasoning)
+
+View Repository
 An autonomous multi-agent system where a Bull and Bear PM debate research documents, adjudicated by a CIO agent.
-* **The "Alpha":** Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains.
-* **Key Tech:** Multi-Agent Systems, Chain-of-Thought (CoT), Streamlit, OpenAI API.
 
-#### 2. The AI Investment Committee (Qualitative)
-**[View Repository](https://github.com/bdschi1/equity-research-scorer)**
+The "Alpha": Mitigates confirmation bias by forcing models to generate mutually exclusive deep-reasoning chains.
+
+Key Tech: Multi-Agent Systems, Chain-of-Thought (CoT), Streamlit, OpenAI API.
+
+2. The AI Investment Committee (Qualitative)
+
+View Repository
 An automated "Digital Portfolio Manager" that reads, grades, and validates investment research notes against a standardized rubric.
-* **The "Alpha":** Quantifies the "Variant View" in unstructured text and detects consensus-hugging.
-* **Key Tech:** Pydantic (Structured Outputs), OpenAI (GPT-4o), SEC/Yahoo APIs.
 
-#### 3. Backtest Factor Clinic (Quantitative)
-**[View Repository](https://github.com/bdschi1/backtest-factor-clinic)**
+The "Alpha": Quantifies the "Variant View" in unstructured text and detects consensus-hugging.
+
+Key Tech: Pydantic (Structured Outputs), OpenAI (GPT-4o), SEC/Yahoo APIs.
+
+3. Backtest Factor Clinic (Quantitative)
+
+View Repository
 A modular clinic for validating investment factors before they touch live capital.
-* **The "Alpha":** Prevents overfitting by subjecting signals to regime changes, decay analysis, and transaction cost stress-tests.
-* **Key Tech:** Python (Pandas/NumPy), Vectorbt, Statistical Analysis.
 
----
+The "Alpha": Prevents overfitting by subjecting signals to regime changes, decay analysis, and transaction cost stress-tests.
 
-### 🧬 AI Engineering & Ops (The "Model" Stack)
-*Infrastructure for creating, training, and vetting financial domain models.*
+Key Tech: Python (Pandas/NumPy), Vectorbt, Statistical Analysis.
 
-#### 4. Financial RLHF Studio (Data Engine)
-**[View Repository](https://github.com/bdschi1/financial-rlhf-studio)**
+🧬 AI Engineering & Ops (The "Model" Stack)
+
+Infrastructure for creating, training, and vetting financial domain models.
+
+4. Financial RLHF Studio (Data Engine)
+
+View Repository
 A "Human-in-the-Loop" labeling interface for capturing domain expertise to train financial LLMs.
-* **The Workflow:** Generates "Draft vs. Expert" pairs to create DPO (Direct Preference Optimization) datasets.
-* **Goal:** Solving the "Generic Finance" problem by capturing specific institutional nuance for fine-tuning.
 
-#### 5. Async Model Trainer (Infrastructure)
-**[View Repository](https://github.com/bdschi1/async-model-trainer)**
-A scalable backend pipeline that automates the fine-tuning lifecycle.
-* **The Workflow:** Monitors the RLHF Studio for new labeled data thresholds -> Triggers cloud GPU jobs -> Deploys new LoRA adapters.
-* **Key Tech:** Asynchronous Queues (Celery/Redis), Cloud GPU APIs (Lambda/RunPod), PEFT/LoRA.
+The Workflow: Generates "Draft vs. Expert" pairs to create DPO (Direct Preference Optimization) datasets.
 
-#### 6. Dynamic Thesis Vetter (Agentic RAG)
-**[View Repository](https://github.com/bdschi1/dynamic-thesis-vetter)**
+Goal: Solving the "Generic Finance" problem by capturing specific institutional nuance for fine-tuning.
+
+5. Async Model Trainer (Infrastructure)
+
+View Repository
+A production-grade microservices architecture for scalable LLM fine-tuning.
+
+The Architecture: Decouples the Control Plane (FastAPI/Streamlit) from the Compute Plane (GPU Workers) via a Redis message broker.
+
+Key Tech: Celery (Async Queues), FastAPI, Unsloth (Llama-3 Optimization), Docker Compose.
+
+6. Dynamic Thesis Vetter (Agentic RAG)
+
+View Repository
 An "Active Interviewer" agent that interrogates investment memos rather than just summarizing them.
-* **The Workflow:** Identifies logical gaps in a thesis -> Generates probing questions -> Searches the document to test robustness.
-* **Key Tech:** LangGraph (State Management), Advanced RAG, Dynamic Prompting.
 
+The Workflow: Identifies logical gaps in a thesis -> Generates probing questions -> Searches the document to test robustness.
+
+Key Tech: LangGraph (State Management), Advanced RAG, Dynamic Prompting.
 ---
 
 ### 🛠️ Technical Stack
