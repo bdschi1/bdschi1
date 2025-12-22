@@ -2,9 +2,8 @@
 
 ## Investment Professional & Python Developer
 
-Bridging the gap between **Institutional Finance** and **Production-Grade AI**.
-I translate discretionary investment logic into **reproducible, autonomous software agents**.
-
+Goal: Bridge the gap between **Institutional Finance** and **Production-Grade AI** by
+translating discretionary investment logic into **reproducible, autonomous software agents; expert institutional finance operationalized into systems that could produce training data at scale.**
 ---
 
 ## 🏛️ Core Applications — Buy-Side Stack
