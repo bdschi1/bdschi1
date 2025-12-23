@@ -1,122 +1,138 @@
+_pm-to-ai_
 
+# Institutional AI Evaluation & Investment Workflows
 
+**20+ years as a portfolio manager and equity analyst at elite global hedge funds (Point72/SAC, Balyasny), managing $500MM–$750MM portfolios and building/leading research teams. MS in Data Science (ML/Deep Learning, Northwestern) | MBA (Finance, Rollins) | CFA Charterholder.**
 
-_pm-to-ai:_ #Bridging the gap between **institutional finance** and **production‑grade AI**#
-_Translating discretionary investment logic into reproducible, autonomous software agents and data engines_ 
-_that generate training labels at scale._
+Now specializing in evaluation frameworks and quality assurance for AI systems in institutional finance—translating buy-side quality standards into reproducible test suites, rubrics, and validation workflows.
+---
 
-***
+## 🎯 Core Competency: LLM Evaluation for Finance
 
-## 🏛️ Core Applications — Buy‑Side Stack
+Designing evaluation frameworks that stress-test AI outputs against institutional quality bars—GAAP accuracy, variant view strength, numerical reasoning, and factual grounding.
 
-_Tools designed to automate and augment the institutional investment process,_ from 
-**idea debate** to **research scoring** to **factor validation**.
+**Focus Areas:**
+- Evaluation rubric design for investment research and financial analysis
+- Ground truth validation against regulatory filings (SEC EDGAR) and market data
+- Error taxonomy development (hallucinations, GAAP mixups, consensus-hugging)
+- Human-in-the-loop labeling workflows for preference data generation
+- Statistical validation of model outputs (A/B testing, significance testing)
 
-***
+---
 
-### 🔹 Long/Short Arena — *Deep Reasoning*
+## 📂 Evaluation Projects
 
-**Repository:**  
-👉 https://github.com/bdschi1/llm-long-short-arena
+### 🔹 AI Investment Committee — Automated Research Scoring
 
-An autonomous multi‑agent system where **Bull** and **Bear PMs** debate research documents, adjudicated by a **CIO agent**.
+**Repository:** https://github.com/bdschi1/equity-research-scorer
 
-- **Alpha:** Forces mutually exclusive reasoning paths to mitigate confirmation bias and surface non‑obvious drivers.  
-- **Focus:** Decision robustness under adversarial, institutional‑style reasoning on 10‑Ks, earnings calls, and sell‑side research.
+An evaluation framework that grades investment research against institutional rubrics.
 
-**Tech:** Multi‑Agent Systems · Chain‑of‑Thought · Streamlit · OpenAI API
+**Evaluation Design:**
+- Standardized scoring criteria: variant view strength, bear case quality, mosaic strategy, pre-mortem analysis
+- Automated fact-checking against SEC EDGAR and Yahoo Finance APIs
+- Error detection: consensus-hugging, weak differentiation, unsupported claims
 
-***
+**Value Proposition:** Quantifies research quality and detects low-conviction pitches that institutional investors would reject.
 
-### 🔹 AI Investment Committee — *Qualitative*
+**Tech:** Pydantic · OpenAI (GPT-4o) · SEC & Yahoo Finance APIs
 
-**Repository:**  
-👉 https://github.com/bdschi1/equity-research-scorer
+---
 
-An automated **Digital Portfolio Manager** that reads, grades, and validates investment research against a standardized rubric.
+### 🔹 Financial RLHF Studio — Evaluation Data Engine
 
-- **Alpha:** Quantifies the *variant view* embedded in unstructured text to detect consensus‑hugging and weak differentiation.  
-- **Use Case:** First‑pass review of stock pitches and macro reports, with institutional scoring (variant view, bear case, pre‑mortem, mosaic strategy) and automatic fact‑checking against **SEC EDGAR** and **Yahoo Finance**.
+**Repository:** https://github.com/bdschi1/financial-rlhf-studio
 
-**Tech:** Pydantic · OpenAI (GPT‑4o) · SEC & Yahoo Finance APIs
+A human-in-the-loop labeling interface for capturing institutional expertise as evaluation datasets.
 
-***
+**Workflow:**
+- RAG-generated drafts vs expert-corrected outputs on 10-Ks and research notes
+- Diff tracking with error taxonomies (hallucinations, GAAP errors, tone issues, numerical mistakes)
+- Generates DPO-ready preference datasets and golden answer test suites
 
-### 🔹 Backtest Factor Clinic — *Quantitative*
+**Value Proposition:** Encodes domain-specific quality standards beyond generic finance benchmarks.
 
-**Repository:**  
-👉 https://github.com/bdschi1/backtest-factor-clinic[6]
+**Tech:** LangChain · OpenAI · ChromaDB · Streamlit · Docker
 
-A modular clinic for validating investment factors before they touch live capital.[6]
+---
 
-- **Alpha:** Stress‑tests signals across regimes, decay patterns, and transaction costs to expose fragile factors.  
-- **Focus:** Overfitting prevention and factor hygiene via demonstrations of look‑ahead bias, survivorship bias, data leakage, and robust corrections (PIT data, purging/embargo, deflated Sharpe).[6]
+### 🔹 Dynamic Thesis Vetter — Adversarial Evaluation Agent
 
-**Tech:** Python (Pandas, NumPy, SciPy) · VectorBT · Statistical Analysis · Streamlit[6]
+**Repository:** https://github.com/bdschi1/dynamic-thesis-vetter
 
+An agentic evaluation system that stress-tests investment memos through adversarial interrogation.
 
-### 🔹 Financial RLHF Studio — *Data Engine*
+**Evaluation Approach:**
+- **Skeptic Agent (CIO):** Identifies logical gaps, weak assumptions, and narrative fluff
+- **Validator Agent (Research Associate):** Uses RAG over source PDFs to verify or refute claims
+- Iterative questioning until thesis is rigorously challenged
 
-**Repository:**  
-👉 https://github.com/bdschi1/financial-rlhf-studio
+**Value Proposition:** Detects confirmation bias and tests robustness of investment logic before capital deployment.
 
-A **human‑in‑the‑loop labeling interface** for capturing institutional expertise as structured training data.
+**Tech:** LangGraph · LangChain · Advanced RAG · OpenAI (GPT-4o) · ChromaDB · Streamlit · Docker
 
-- **Workflow:** RAG‑generated drafts vs. expert‑corrected outputs on 10‑Ks and research notes → diff tracking + error taxonomies → **DPO‑ready preference datasets**.  
-- **Goal:** Encode institutional nuance beyond “generic finance” by tagging hallucinations, GAAP mixups, tone issues, and other domain‑specific errors.
+---
 
-**Focus:** Preference data generation and error‑taxonomy labeling for fine‑tuning financial LLMs.
+### 🔹 Long/Short Arena — Multi-Agent Evaluation Testbed
 
-***
+**Repository:** https://github.com/bdschi1/llm-long-short-arena
 
-### 🔹 Async Model Trainer — *Infrastructure*
+An adversarial debate system where Bull and Bear PMs argue opposing sides of an investment case, adjudicated by a CIO agent.
 
-**Repository:**  
-👉 https://github.com/bdschi1/async-model-trainer
+**Evaluation Use Case:**
+- Forces mutually exclusive reasoning paths to surface non-obvious risk factors
+- Tests model consistency under adversarial prompting
+- Validates decision robustness on 10-Ks, earnings calls, and sell-side research
 
-A production‑grade microservices architecture for scalable LLM fine‑tuning.
+**Value Proposition:** Detects confirmation bias and one-sided analysis that would fail institutional scrutiny.
 
-- **Architecture:** Decoupled **Control Plane (UI/API)** and **Compute Plane (GPU workers)** communicating via Redis, enabling non‑blocking, asynchronous training jobs with real‑time status.
-- **Design:** Horizontally scalable, GPU‑aware Celery workers executing Unsloth / PyTorch fine‑tuning jobs, orchestrated via Docker Compose.
+**Tech:** Multi-Agent Systems · Chain-of-Thought · Streamlit · OpenAI API
 
-**Tech:** Celery · FastAPI · Pydantic · Unsloth (LLaMA‑3) · PyTorch · PEFT (LoRA) · Docker Compose · Streamlit
+---
 
-***
+### 🔹 Backtest Factor Clinic — Quantitative Validation Framework
 
-### 🔹 Dynamic Thesis Vetter — *Agentic RAG*
+**Repository:** https://github.com/bdschi1/backtest-factor-clinic
 
-**Repository:**  
-👉 https://github.com/bdschi1/dynamic-thesis-vetter
+A validation clinic for stress-testing investment factors before live deployment.
 
-An **active interviewer** agent that interrogates investment memos instead of summarizing them.
+**Quality Assurance Focus:**
+- Overfitting detection and regime stability testing
+- Bias correction: look-ahead bias, survivorship bias, data leakage
+- Robust validation techniques: point-in-time data, purging/embargo, deflated Sharpe ratios
 
-- Identifies logical gaps, weak assumptions, and narrative fluff via a **Skeptic (CIO) agent**.  
-- Generates probing questions and uses **RAG over the source PDF** to validate or refute claims via a **Validator (Research Associate) agent**, iterating until the thesis is stress‑tested.[4]
+**Value Proposition:** Prevents fragile factors from reaching production by enforcing statistical rigor.
 
-**Tech:** LangGraph · LangChain · Advanced RAG · OpenAI (GPT‑4o) · ChromaDB · Streamlit · Docker
+**Tech:** Python (Pandas, NumPy, SciPy) · VectorBT · Statistical Analysis · Streamlit
 
-***
+---
 
-### 🧬 AI Engineering & Ops — Model Stack
+## 🎓 AI & Investment Certifications (Q4 2025 – Jan 2026)
 
-Infrastructure for creating, training, and vetting **financial‑domain models**, with a focus on **human‑in‑the‑loop supervision** and **asynchronous fine‑tuning**.
+- CFA Institute – "Data Science for Investment Professionals"
+- DeepLearning.AI – "Building Evaluations for LLMs"
+- Anthropic – "Prompt Engineering Interactive Tutorial"
+- Weights & Biases – "LLM Monitoring and Observability"
+- Google – "Machine Learning Crash Course"
+- Coursera – "Inferential Statistics" (Duke University)
 
-w.i.p.
-
-***
+---
 
 ## 🛠️ Technical Stack
 
-| Category           | Tools                     |
-| ------------------ | ------------------------- |
-| **Languages**      | Python · SQL              |
-| **AI & LLMs**      | OpenAI · LangChain · RLHF |
-| **Data & Finance** | Pandas · VectorBT         |
-| **Engineering**    | Git · Streamlit · Docker  |
-
+| Category              | Tools                                      |
+| --------------------- | ------------------------------------------ |
+| **Evaluation & QA**   | Pytest · Statistical Analysis · RLHF       |
+| **AI & LLMs**         | OpenAI · Anthropic · LangChain · LangGraph |
+| **Data & Finance**    | Bloomberg Terminal (PORT/PRTU) · AlphaSense · Visible Alpha · Pandas · NumPy · VectorBT · SEC EDGAR API  |
+| **Development**       | Python · Git · Docker · Streamlit          |
 ---
 
 ## 📫 Connect
 
-* **LinkedIn:** [https://www.linkedin.com/in/brad-schonhoft-cfa](https://www.linkedin.com/in/brad-schonhoft-cfa)
-* **Email:** [mailto@protonmail.com](mailto:bdschi1@protonmail.com)
+- **LinkedIn:** https://www.linkedin.com/in/brad-schonhoft-cfa
+- **Email:** bdschi1@protonmail.com
+
+---
+
+**Focus:** Translating institutional quality standards into reproducible AI evaluation frameworks. Available for consulting on LLM evaluation design, domain-specific test suite development, and validation workflow implementation.
