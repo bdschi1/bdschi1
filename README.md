@@ -8,7 +8,7 @@ _Translating discretionary investment logic into reproducible, autonomous softwa
 
 ## 🏛️ Core Applications — Buy‑Side Stack
 
-Tools designed to automate and augment the institutional investment process,_ from 
+_Tools designed to automate and augment the institutional investment process,_ from 
 **idea debate** to **research scoring** to **factor validation**.
 
 ***
