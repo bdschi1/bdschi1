@@ -1,9 +1,7 @@
 
-# Hi there 👋
 
-## Investment Professional & Python Developer
 
-**Goal:** Bridge the gap between **institutional finance** and **production‑grade AI** by translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
+#### Bridging the gap between **institutional finance** and **production‑grade AI** by translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
 
 ***
 
