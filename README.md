@@ -2,13 +2,13 @@
 
 
 ## Bridging the gap between **institutional finance** and **production‑grade AI** 
-## Translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
+_Translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
 
 ***
 
 ## 🏛️ Core Applications — Buy‑Side Stack
 
-Tools designed to automate and augment the institutional investment process, from **idea debate** to **research scoring** to **factor validation**.
+Tools designed to automate and augment the institutional investment process, from **idea debate** to **research scoring** to **factor validation**._
 
 ***
 
