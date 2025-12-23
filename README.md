@@ -1,7 +1,8 @@
 
 
 
-# Bridging the gap between **institutional finance** and **production‑grade AI** by translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
+# Bridging the gap between **institutional finance** and **production‑grade AI** 
+# Translating discretionary investment logic into **reproducible, autonomous software agents** and **data engines that generate training labels at scale**.
 
 ***
 
