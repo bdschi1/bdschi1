@@ -30,20 +30,22 @@ We translate "Multi-Strat" rigor into machine-readable ground truth, focusing on
 | **Portfolio Construction & Risk:** Dynamic sizing, factor management, alpha shorting, and **Thematic Unitization** logic. | **Model Tooling (12/2025+):** API orchestration across **Claude 3.5, Gemini 1.5 Pro, and OpenAI GPT.** | 
 | **LLM Eval Harnesses:** Building deterministic Pydantic scorers and **Weights & Biases (W&B)** observability. | **Asset Class Expansion:** Applying L/S frameworks to Hard Assets and Commercial Real Estate. | **Sell-Side Optimization:** Modeling analyst-to-PM communication and "high-noise" data distillation. |
 
-## 📂 Featured Sample Evaluation Frameworks
+## 📂 Featured Evaluation Frameworks
 
-### 🚀 [Healthcare PM LLM Evals](https://www.google.com/search?q=https://github.com/bdschi1/fin-eval-rubric)
+### 🚀 [Healthcare PM LLM Evals](https://github.com/bdschi1/fin-eval-rubric)
+**Focus:** *Auditable Scoring of Biotech & Clinical Reasoning*
+* **Impact:** Translates 20+ years of healthcare PM experience into a programmatic "Evaluation Rubric." Designed to detect model hallucinations in clinical trial design and FDA regulatory paths—identifying "Conviction Killers" that generic benchmarks miss.
+* **Engineering:** Modular Python implementation utilizing **Pydantic** for rigorous schema validation and **Weights & Biases (W&B)** for real-time observability and drift tracking.
 
-**Focus:** *Focus: Auditable Scoring of Biotech & Clinical Reasoning*
-
-* **Impact:** Scores models on their ability to flag "Conviction Killers"—primary research discrepancies or trial design flaws—and their subsequent impact on position sizing.
-* **Engineering:** Modular Python implementation utilizing Pydantic for schema validation and `Weights & Biases` for observability.
-
-### 🧪 [Equity Research Scorer](https://www.google.com/search?q=https://github.com/bdschi1/equity-research-scorer)
-
+### 🧪 [Equity Research Scorer](https://github.com/bdschi1/equity-research-scorer)
 **Focus:** *Automated Benchmarking of Investment Theses*
+* **Impact:** Quantifies LLM-generated research against institutional standards. Specifically benchmarks **Variant View** strength, **Bear Case** depth, and **Mosaic Theory** integration to ensure models produce differentiated alpha rather than generic consensus.
+* **Engineering:** Features an automated scoring engine comparing model outputs against "Ground Truth" expert baselines using **Cosine Similarity** and custom financial **NLP heuristics**.
 
-* **Impact:** Quantifies the quality of LLM-generated research against institutional standards like variant view strength, bear case quality, and mosaic strategy.
+### 🏛️ [Thematic Unitization Lab](https://github.com/bdschi1/thematic-unitization)
+**Focus:** *Evaluating Multi-Asset "Trade Packages" as Single Risk Units*
+* **Impact:** Audits advanced PM reasoning where disparate tickers (Long/Short, Options, Hedges) are treated as a single "synthetic ticker." Critical for training models to navigate complex, real-world portfolios rather than isolated security analysis.
+* **Engineering:** Orchestrated via **LangChain Agentic Workflows** to coordinate multi-source data retrieval and synthesize a unitized, conviction-weighted risk score.
 
 ## 🎯 Strategic Value for AI Labs
 
@@ -53,7 +55,7 @@ We translate "Multi-Strat" rigor into machine-readable ground truth, focusing on
 2. **Conviction Updates:** Evaluating a model's ability to update conviction and **trade** around a position based on conflicting primary source data and quantitative variables.
 3. **Regime Change Detection:** Stress-testing models on their ability to identify shifts in market macro-drivers and adjust fundamental assumptions accordingly.
 4. **Adversarial Testing:** Identifying where models succumb to "Consensus-Hugging" or fail to recognize the "Unknown Unknowns" in complex market regimes.
-5. **Thematic Trade Logic—evaluating a model’s ability to treat disparate positions (e.g. Fundamental Longs + Statistical Shorts + Options + ETFS + baskets) as a single risk-unit, rather than isolated tickers."**
+5. **Thematic Trade Logic—evaluating a model’s ability to treat disparate positions (e.g. Fundamental Longs + Statistical Shorts + Options + ETFS + baskets) as a single risk-unit, rather than isolated tickers.**
 
 ## 📫 Connect & Collaborate
 * **Founder:** Brad Schonhoft | CFA Charterholder (2001) 
