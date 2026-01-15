@@ -1,138 +1,64 @@
-_pm-to-ai_
+_pm-to-ai
 
-# Institutional AI Evaluation & Investment Workflows
 
-**20+ years as a portfolio manager and equity analyst at elite global hedge funds (Point72/SAC, Balyasny), managing $500MM–$750MM portfolios and building/leading research teams. MS in Data Science (ML/Deep Learning, Northwestern) | MBA (Finance, Rollins) | CFA Charterholder.**
+# 🏛️ pm-to-ai | Institutional AI Alignment & Evaluation Lab
 
-Now specializing in evaluation frameworks and quality assurance for AI systems in institutional finance—translating buy-side quality standards into reproducible test suites, rubrics, and validation workflows.
----
+**$750M Peak AUM Portfolio Manager (Sigma Capital (Point72)/Balyasny/Other) | MS Data Science (Northwestern '22) | CFA Charterholder (2001)**
 
-## 🎯 Core Competency: LLM Evaluation for Finance
+`pm-to-ai` (Est. Nov 2025) is a specialized AI evaluation laboratory bridging the gap between elite discretionary judgment and the technical requirements of LLM alignment. We specialize in **Dynamic Conviction & Portfolio Frameworks**—evaluating models on their ability to build, manage, and risk-mitigate institutional Equity Long/Short books.
 
-Designing evaluation frameworks that stress-test AI outputs against institutional quality bars—GAAP accuracy, variant view strength, numerical reasoning, and factual grounding.
 
-**Focus Areas:**
-- Evaluation rubric design for investment research and financial analysis
-- Ground truth validation against regulatory filings (SEC EDGAR) and market data
-- Error taxonomy development (hallucinations, GAAP mixups, consensus-hugging)
-- Human-in-the-loop labeling workflows for preference data generation
-- Statistical validation of model outputs (A/B testing, significance testing)
+## 💎 The pm-to-ai Advantage
 
----
+We translate "Multi-Strat" rigor into machine-readable ground truth, focusing on the "Cost of Error" in high-turnover environments where the goal is optimizing **Slugging Percentage** and portfolio-level risk-adjusted returns.
 
-## 📂 Evaluation Projects
+* **Full-Cycle Portfolio Management:** 20+ years of institutional experience across the L/S lifecycle: **building** thematic books, **managing** factor exposures, **trading** execution, and implementing **complete risk frameworks** at the **$750M+ AUM** level (Point72, Balyasny).
+* **Cross-Regime Pattern Recognition:** Managed institutional capital through the Dot-com bust, 9/11, GFC, EU Debt Crisis, COVID-19, and the 2022 inflationary regime. We evaluate if models recognize shifting market "rules" or succumb to recency bias.
+* **Regulatory & Primary Research Depth:** Extensive FDA regulatory understanding and active **FOIA user**. We verify the integrity of the information chain from molecular genetics (PhD-level coursework, OSU) to manufacturing and regulatory filings.
+* **Modern Deep Learning Expertise:** MS in Data Science (Northwestern '22), specializing in **Modeling and Analytics**. Technical capstone focused on **LSTM Architectures** for biotech stock prediction.
+* **Advanced LLM Tooling & API Integration:** Power-user of **Claude (Project/Code)**, **Gemini (NotebookLM/Advanced)**, **OpenAI Pro**, and **Perplexity**. We utilize model-specific coding agents and local Python environments to benchmark reasoning traces across the frontier model spectrum (Claude 3.5, Gemini 1.5 Pro, GPT-4o).
+* **Async-First Infrastructure:** GitLab Certified Associate and Remote Foundations expert. We deliver high-fidelity evaluations and "documentation-first" workflows autonomously.
 
-### 🔹 AI Investment Committee — Automated Research Scoring
+## 🛠️ Expertise & Roadmap
 
-**Repository:** https://github.com/bdschi1/equity-research-scorer
+| **Current Focus (2026)** | **Expanding Q1/Q2 2026** | **2027 Strategic Roadmap** |
+| --- | --- | --- |
+| **Portfolio Construction:** Sizing, Factor Management, & Alpha Shorting. | **Real Estate:** Hotel development & Commercial Asset Mgmt. | **Investment Banking:** M&A, LBO, and complex valuation logic. |
+| **Healthcare/Biotech:** Trial design, molecular "moats," & FDA path. | **Infrastructure:** Active **Lambda GPU Workstation** (Ubuntu/CUDA). | **Advanced Agentic Evals:** Multi-step deal-cycle reasoning. |
+| **LLM Eval Harnesses:** Building deterministic Pydantic scorers. | **API Stack:** Claude 3.5 Sonnet, Gemini 1.5 Pro, GPT-4o. | **Regulatory Alignment:** SEC/FINRA AI compliance auditing. 
 
-An evaluation framework that grades investment research against institutional rubrics.
+## 📂 Featured Evaluation Frameworks
 
-**Evaluation Design:**
-- Standardized scoring criteria: variant view strength, bear case quality, mosaic strategy, pre-mortem analysis
-- Automated fact-checking against SEC EDGAR and Yahoo Finance APIs
-- Error detection: consensus-hugging, weak differentiation, unsupported claims
+### 🚀 [Healthcare PM LLM Evals](https://www.google.com/search?q=https://github.com/bdschi1/fin-eval-rubric)
 
-**Value Proposition:** Quantifies research quality and detects low-conviction pitches that institutional investors would reject.
+**Focus:** *Auditable Scoring of Biotech & Clinical Reasoning*
 
-**Tech:** Pydantic · OpenAI (GPT-4o) · SEC & Yahoo Finance APIs
+* **Impact:** Scores models on their ability to flag "Conviction Killers"—primary research discrepancies or trial design flaws—and their subsequent impact on position sizing.
+* **Engineering:** Modular Python implementation utilizing Pydantic for schema validation and `Weights & Biases` for observability.
 
----
+### 🧪 [Equity Research Scorer](https://www.google.com/search?q=https://github.com/bdschi1/equity-research-scorer)
 
-### 🔹 Financial RLHF Studio — Evaluation Data Engine
+**Focus:** *Automated Benchmarking of Investment Theses*
 
-**Repository:** https://github.com/bdschi1/financial-rlhf-studio
+* **Impact:** Quantifies the quality of LLM-generated research against institutional standards like variant view strength, bear case quality, and mosaic strategy.
 
-A human-in-the-loop labeling interface for capturing institutional expertise as evaluation datasets.
+## 🎯 Strategic Value for AI Labs
 
-**Workflow:**
-- RAG-generated drafts vs expert-corrected outputs on 10-Ks and research notes
-- Diff tracking with error taxonomies (hallucinations, GAAP errors, tone issues, numerical mistakes)
-- Generates DPO-ready preference datasets and golden answer test suites
+`pm-to-ai` provides AI researchers and platforms (Mercor, Turing, Scale AI) with high-fidelity feedback for specialized model alignment:
 
-**Value Proposition:** Encodes domain-specific quality standards beyond generic finance benchmarks.
+1. **Portfolio Logic Verification:** Training models to understand how individual security catalysts interact with broader portfolio risk metrics (Net/Gross, Factor tilt, Liquidity).
+2. **Bayesian Conviction Updates:** Evaluating a model's ability to update conviction and **trade** around a position based on conflicting primary source data and quantitative variables.
+3. **Regime Change Detection:** Stress-testing models on their ability to identify shifts in market macro-drivers and adjust fundamental assumptions accordingly.
+4. **Adversarial Testing (Red Teaming):** Identifying where models succumb to "Consensus-Hugging" or fail to recognize the "Unknown Unknowns" in complex market regimes.
 
-**Tech:** LangChain · OpenAI · ChromaDB · Streamlit · Docker
 
----
+## 📫 Connect & Collaborate
 
-### 🔹 Dynamic Thesis Vetter — Adversarial Evaluation Agent
+* **Founder:** Brad Schonhoft | CFA Charterholder (2001) | MS Data Science (Northwestern '22)
+* **Education:** MS Data Science (Northwestern) | PhD Coursework (ABD) in Molecular Genetics (OSU) | MBA (Rollins) | BA Biology (Miami U)
+* **Institutional Background:** 20+ years at Sigma Capital (Point72), Balyasny Asset Management, others. 
+* **Office:** Dedicated AI Evaluation Lab (Operational since Nov 2025).
+* **LinkedIn:** www.linkedin.com/in/brad-schonhoft-cfa
 
-**Repository:** https://github.com/bdschi1/dynamic-thesis-vetter
 
-An agentic evaluation system that stress-tests investment memos through adversarial interrogation.
 
-**Evaluation Approach:**
-- **Skeptic Agent (CIO):** Identifies logical gaps, weak assumptions, and narrative fluff
-- **Validator Agent (Research Associate):** Uses RAG over source PDFs to verify or refute claims
-- Iterative questioning until thesis is rigorously challenged
-
-**Value Proposition:** Detects confirmation bias and tests robustness of investment logic before capital deployment.
-
-**Tech:** LangGraph · LangChain · Advanced RAG · OpenAI (GPT-4o) · ChromaDB · Streamlit · Docker
-
----
-
-### 🔹 Long/Short Arena — Multi-Agent Evaluation Testbed
-
-**Repository:** https://github.com/bdschi1/llm-long-short-arena
-
-An adversarial debate system where Bull and Bear PMs argue opposing sides of an investment case, adjudicated by a CIO agent.
-
-**Evaluation Use Case:**
-- Forces mutually exclusive reasoning paths to surface non-obvious risk factors
-- Tests model consistency under adversarial prompting
-- Validates decision robustness on 10-Ks, earnings calls, and sell-side research
-
-**Value Proposition:** Detects confirmation bias and one-sided analysis that would fail institutional scrutiny.
-
-**Tech:** Multi-Agent Systems · Chain-of-Thought · Streamlit · OpenAI API
-
----
-
-### 🔹 Backtest Factor Clinic — Quantitative Validation Framework
-
-**Repository:** https://github.com/bdschi1/backtest-factor-clinic
-
-A validation clinic for stress-testing investment factors before live deployment.
-
-**Quality Assurance Focus:**
-- Overfitting detection and regime stability testing
-- Bias correction: look-ahead bias, survivorship bias, data leakage
-- Robust validation techniques: point-in-time data, purging/embargo, deflated Sharpe ratios
-
-**Value Proposition:** Prevents fragile factors from reaching production by enforcing statistical rigor.
-
-**Tech:** Python (Pandas, NumPy, SciPy) · VectorBT · Statistical Analysis · Streamlit
-
----
-
-## 🎓 AI & Investment Certifications (Q4 2025 – Jan 2026)
-
-- CFA Institute – "Data Science for Investment Professionals"
-- DeepLearning.AI – "Building Evaluations for LLMs"
-- Anthropic – "Prompt Engineering Interactive Tutorial"
-- Weights & Biases – "LLM Monitoring and Observability"
-- Google – "Machine Learning Crash Course"
-- Coursera – "Inferential Statistics" (Duke University)
-
----
-
-## 🛠️ Technical Stack
-
-| Category              | Tools                                      |
-| --------------------- | ------------------------------------------ |
-| **Evaluation & QA**   | Pytest · Statistical Analysis · RLHF       |
-| **AI & LLMs**         | OpenAI · Anthropic · LangChain · LangGraph |
-| **Data & Finance**    | Bloomberg Terminal (PORT/PRTU) · AlphaSense · Visible Alpha · Pandas · NumPy · VectorBT · SEC EDGAR API  |
-| **Development**       | Python · Git · Docker · Streamlit          |
----
-
-## 📫 Connect
-
-- **LinkedIn:** https://www.linkedin.com/in/brad-schonhoft-cfa
-- **Email:** bdschi1@protonmail.com
-
----
-
-**Focus:** Translating institutional quality standards into reproducible AI evaluation frameworks. Available for consulting on LLM evaluation design, domain-specific test suite development, and validation workflow implementation.
