@@ -1,4 +1,5 @@
-# pm-to-ai | Domain Expert for AI Evaluation (Equity L/S, Healthcare)
+# pm-to-ai | Domain Expert for AI Evaluation 
+_(Equity L/S and Risk Decomposition)_
 
 **Former institutional PM translating buy-side judgment into machine-readable structured criteria for LLM training, evaluation, and adversarial testing.**
 
@@ -11,77 +12,80 @@
 | **Investment** | PM / Equity Analyst / Hedge Fund launch, capital raising experience (1998–2023); 14 yrs as PM; ~$750M AUM peak |
 | **Platforms** | Sigma Capital (now part of Point72), ~10 yrs; Balyasny; Forstmann; others |
 | **CFA** | Chartered 2001 |
-| **MS Data Science** | Northwestern (2022) — ML/Deep Learning specialization 
+| **MS Data Science** | Northwestern (2022) — ML/Deep Learning specialization |
 | **Domain** | Global Healthcare (GICS 3510/3520; Americas/Europe/India); cross-sector generalist L/S |
 
-pm-to-ai is founder-led today for speed and accountability. As scope warrants, additional domain experts (buy-side, technical) are coordinated under a single rubric and QA process.
-
----
+pm-to-ai is founder-led today for speed and accountability. As scope warrants, additional domain experts (buy-side, technical, scientific/medcial) are coordinated under a single rubric and QA process.
 
 ## Evaluation Standards
 
-LLM outputs are graded the way an institutional PM reviews analyst work:
+LLM outputs are graded the way an institutional PM reviews analyst work or how portfolio (pod) risk is assessed at the CIO level.  Dimensions are categorized by institutional philosophy, thesis construction, advanced dynamics, and risk management.
 
 | Dimension | What Matters |
 |-----------|--------------|
-| **GenAI does not generate institutional level investment judgement** | Domain experts validate whether an idea makes sense |
-| **Outcome only focus fails in process assessment** | Expert evals evaluate process quality, utility |
-| **Assessment of Investment Process** | Logic, Efficiency, Scalability, Communication |
-| **Variant view quality** | Specific, testable, differentiated edge — not consensus paraphrase |
-| **Bear-case rigor** | Disconfirming evidence, downside path completeness, what breaks the thesis |
-| **Evidence hygiene** | Clear separation of facts vs inference vs speculation; unsupported assertions penalized |
-| **Decision realism** | Constraints (liquidity, position limits), timing, second-order portfolio effects |
-| **Conviction updates** | Correct updating under conflicting or partial data |
-| **Cost-of-error focus** | Whether failures would drive material decision-quality degradation |
-| **Sizing focus** | Dynamic position sizing based on conviction and volatility / Kelly criterion |
-| **Thematic Trade builds**  | multi-instrument thesis evaluations |
-| **Cross-corpus pattern detection** | Hidden correlation surfacing |
-| **Portfolio Risk Management rigor** | 'Bench' portfolios; risk metric design, implementation, and monitoring |
-| **Volatility has exploitable structure** | Domain knowledge required to model |
-| **Thesis Risk Decomposition focus** | Scoring based on material risks - fundamental and stat/market |
+| **Investment Process** | Consistency and Actionability evals|
+| **Project Managing real-time Paper Portfolio** | 20+ years domain expertise for training, evals/rubrics, adversarial testing. 
+| **Institutional Judgment** | GenAI does not generate institutional level investment judgment; domain experts validate whether an idea makes sense. |
+| **Process Quality Assessment** | Outcome-only focus fails in process assessment; expert evals evaluate logic, efficiency, scalability, and conviction communication. Idea template assessments|
+| **Counterfactual Reasoning** | Separating decision quality from outcome quality; process evaluation independent of P&L. |
+| **Decision Realism** | Constraints (liquidity, position limits), timing, and second-order portfolio effects. |
+| **Thesis Construction & Evidence** | Evaluate how conviction can change |
+| **Variant View Quality** | Specific, testable, differentiated edge—not consensus paraphrase. |
+| **Bear-case Rigor** | Disconfirming evidence, downside path completeness, and what breaks the thesis. |
+| **Evidence Hygiene** | Clear separation of facts vs. inference vs. speculation; unsupported assertions penalized. |
+| **Information Decay Rate** | Recognizing different information half-lives; identifying where stale data creates negative expected value. |
+| **Reflexivity Recognition** | Understanding that investment actions change market dynamics; thesis validity decays as capital crowds in. |
+| **Optionality Asymmetry** | Distinguishing symmetric vs. asymmetric payoff structures; embedded convexity in equity positions. |
+| **Volatility Structure** | Domain knowledge required to model exploitable structure in volatility. |
+| **Pattern Detection** | Hidden correlation surfacing and latent relationships across cross-corpus data. |
+| **Portfolio Risk Rigor** | 'bullpen' portfolios; risk metric design, implementation, and monitoring. |
+| **Thesis Risk Decomposition** | Scoring based on material risks—fundamental, statistical, and market. |
+| **Sizing Focus** | Dynamic position sizing based on conviction and volatility (Kelly criterion). |
+| **Liquidity Regime Contingency** | Position analysis conditioned on market state; liquidity is regime-dependent, not security-fixed. |
+| **Conviction Updates** | Correct updating under conflicting or partial data. |
+| **Cost-of-Error Focus** | Whether failures would drive material decision-quality degradation. |
+| **Thematic Trade Builds** | Multi-instrument thesis evaluations. |
 
 ### Healthcare / Biotech Specifics
-- Trial design logic (endpoints, power, populations, comparators)
-- Readout interpretation and uncertainty handling
-- Regulatory pathway realism (FDA, EMA)
-- Mechanism plausibility vs narrative-only reasoning
-- Portfolio modifications and risk management evaluations around major events (e.g. Phase 3 clinical trial results; macro risks )
+- Trial design logic (endpoints, power, populations, comparators).
+- Readout interpretation and uncertainty handling.
+- Regulatory pathway realism (FDA, EMA).
+- Mechanism plausibility vs. narrative-only reasoning.
+- Portfolio modifications and risk management evaluations around major events (e.g., Phase 3 results; macro risks).
 
 ### Short-Selling Expertise
-Experience is weighted toward **alpha-generating short positions** — fundamental shorts with differentiated variant views and quant/stat-based shorts. This informs evaluation of:
-- Short thesis construction and catalyst identification
-- Downside scenario completeness
-- Borrow/locate realism and squeeze risk awareness
-- Asymmetry assessment (e.g. short interest return profile)
-- Volatility assessments (e.g. low vol anomalies; compression considerations)
-- Derivatives/Synthetics strategies
-- Portfolio risk metrics implications and mitigation approaches
+Experience is weighted toward **alpha-generating short positions**. This informs evaluation of:
+- Short thesis construction and catalyst identification.
+- Downside scenario completeness.
+- Borrow/locate realism and squeeze risk awareness.
+- Asymmetry assessment (e.g., short interest return profile).
+- Volatility assessments (e.g., low vol anomalies; compression considerations).
+- Derivatives/Synthetics strategies and portfolio risk metrics implications.
 
 ---
 
 ## Adversarial Testing - Red Teaming
 
-Constructing and evaluating inputs designed to expose model failures that matter in real decision contexts. Generic benchmarks miss domain-specific failure modes; domain-expert adversarial testing increase probability of identifying them. Conviction testing designed to discern actionable information from new but insignificant within event path.
-
-**Examples of adversarial scenarios used in evaluation:**
+Constructing and evaluating inputs designed to expose model failures that matter in real decision contexts.
 
 | Scenario | What It Tests |
 |----------|---------------|
-| Event driven trade | Explore less obvious failure modes |
-| Provide thesis with well defined event path| Stale data detection, legal or FOIA info misses|
-| Present conflicting sell-side estimates | Conviction updating under uncertainty |
-| Include a recent stock split or dividend not reflected in price history | Corporate action awareness |
-| LLM GARP thesis | Factor decomposition, estimates dispersion, volatility sizing considerations |
-| Describe a Phase 2 trial with underpowered secondary endpoint | Clinical reasoning rigor |
-| Describe Phase 3 trial that hit primary endpoint, stock up |  manufacturing, label, or approval timing remain key risks |
-| Thesis event path | Exit strategy and latent relationships |
-| Ask for bear case on consensus long | Disconfirming evidence generation vs generic "competition risk" |
-| Request thesis on company with material GAAP/non-GAAP divergence | Accounting quality sensitivity |
-| Present regime-dependent logic (ZIRP vs inflation environment) | Regime shift recognition |
-| Merger Arb thesis clearly modeled | Why spread exists |
-| Portfolio impact focus| Carry cost, volatility impact |
-
-The goal: identify where models fail in ways that would degrade decision quality or generate losses in a real portfolio context.
+| **"Negative EV" Biotech** | **Optionality asymmetry awareness:** Present a biotech company trading at/below net cash with an upcoming Phase 2 readout. Test if model identifies embedded convexity (limited downside vs. high-velocity upside). |
+| **"High-Freq Macro" Conflict** | **Information decay rate calibration:** Provide a 3-day-old high-impact macro data point (e.g., CPI) vs. a fresh but low-significance sell-side "check." Test if model incorrectly prioritizes "new" data over decaying data. |
+| **"Gating" Liquidity Event** | **Liquidity regime contingency:** Request sizing for a small-cap position during a simulated VIX spike (VIX > 35). Test if model recognizes liquidity is regime-dependent. |
+| **"Right Process/Wrong Outcome"** | **Counterfactual reasoning integrity:** Present a logical investment memo for a trade that lost 20% due to an unpredictable "black swan." Evaluate if LLM penalizes process based on P&L (outcome bias). |
+| **Event-driven trade** | Explore less obvious failure modes in time-sensitive contexts. |
+| **Stale event path** | Provide thesis with well-defined event path to test for stale data or legal/FOIA info misses. |
+| **Conflicting estimates** | Present conflicting sell-side estimates to test conviction updating under uncertainty. |
+| **Corporate Action Awareness** | Include a recent stock split or dividend not reflected in price history. |
+| **LLM GARP thesis** | Factor decomposition, estimates dispersion, and volatility sizing considerations. |
+| **Underpowered Trial** | Describe a Phase 2 trial with underpowered secondary endpoints to test clinical reasoning rigor. |
+| **Post-Catalyst Drift** | Describe Phase 3 trial that hit primary endpoint with stock up; test if manufacturing/label risks are identified. |
+| **Consensus Bear Case** | Ask for a bear case on consensus long to test for disconfirming evidence vs. generic "competition risk." |
+| **GAAP Divergence** | Request thesis on company with material GAAP/non-GAAP divergence to test accounting sensitivity. |
+| **Regime Shift Logic** | Present regime-dependent logic (ZIRP vs. inflation) to test regime shift recognition. |
+| **Merger Arb Model** | Clearly modeled merger arb thesis to test why a spread exists. |
+| **Portfolio Impact** | Focus on carry cost and volatility impact within a broader portfolio. |
 
 ---
 
@@ -89,113 +93,66 @@ The goal: identify where models fail in ways that would degrade decision quality
 
 | Repo | Purpose |
 |------|---------|
-| **[backtest-factor-clinic](https://github.com/bdschi1/backtest-factor-clinic)** | Diagnostic suite for detecting financial hallucinations in quant code. Statistical checks (Point-in-Time, Deflated Sharpe) to eliminate biases. |
-| **[financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)** | DPO workflow for transforming domain expertise into structured training data. Corrects AI hallucinations on financial reasoning. |
+| **[backtest-factor-clinic](https://github.com/bdschi1/backtest-factor-clinic)** | Diagnostic suite for detecting financial hallucinations in quant code. |
+| **[financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)** | DPO workflow for transforming domain expertise into structured training data. |
 | **[equity-research-scorer](https://github.com/bdschi1/equity-research-scorer)** | Automated benchmarking of investment theses against institutional standards. |
 | **[llm-long-short-arena](https://github.com/bdschi1/llm-long-short-arena)** | Evaluation harness for L/S reasoning quality. |
 | **[dynamic-thesis-vetter](https://github.com/bdschi1/dynamic-thesis-vetter)** | Tests conviction updating when new information arrives. |
-| **[async-model-trainer](https://github.com/bdschi1/async-model-trainer)** | Production-grade async training pipeline (FastAPI, Redis, Celery, auto-hardware detection). |
+| **[async-model-trainer](https://github.com/bdschi1/async-model-trainer)** | Production-grade async training pipeline (FastAPI, Redis, Celery). |
 
 ---
 
 ## Deliverables
 
 **For AI labs and evaluation platforms:**
+1. **Rubrics & scoring guides** — Institutional standards with failure taxonomies tied to cost-of-error.
+2. **Expert-labeled datasets** — Examples with rationales, counterexamples, and adversarial variants.
+3. **Adversarial test suites** — Scenarios designed to expose consequential failure modes.
+4. **Evaluation task design** — Scenario construction, prompt sets, and acceptance criteria.
+5. **RLHF/DPO feedback** — High-quality preference data grounded in institutional judgment.
 
-1. **Rubrics & scoring guides** — Institutional standards with explicit pass/fail thresholds; failure taxonomies tied to cost-of-error
-2. **Expert-labeled datasets** — Labeled examples with rationales; counterexamples and adversarial variants
-3. **Adversarial test suites** — Scenarios designed to expose consequential failure modes; stress tests where errors compound
-4. **Evaluation task design** — Scenario construction, prompt sets, acceptance criteria, scoring plans
-5. **RLHF/DPO feedback** — High-quality preference data grounded in institutional judgment
-
-**Failure modes typically caught:**
-- Stale data (metrics from outdated filings, price data integrity/adjustments)
-- Corporate actions missed (splits, spinoffs, M&A)
-- Survivorship / look-ahead bias
-- Regime shift blindness | Failure to see correlation changes
-- Decomposing realized P&L into fewer than these components: selection process, sizing, and timing
-- Sizing on conviction score and target without considering idiosyncratic risk
-- Event risk mishandling (especially biotech catalysts)
-- Shallow or generic bear cases
-- New datapoints / analyses that don’t change risk/reward
-- Factor exposure mistakenly identified as alpha 
-
----
-
-## Engagement
-
-For contract inquiries, include:
-- **Workflow** (e.g., trial readout reasoning, thesis memo quality, catalyst mapping, portfolio sizing, short thesis robustness)
-- **Output format** (free text vs structured JSON; schema constraints; rubric/grader requirements)
-- **Failure modes of interest** (hallucinations, evidence gaps, shallow bear case, endpoint mistakes)
-- **Volume & cadence** (items per week; sprint length; review cycle)
-
-**Contact:** [LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
-
----
-
-## Technical Environment
-
-| Component | Setup |
-|-----------|-------|
-| **Compute** | Lambda GPU workstation (Ubuntu/Windows/CUDA); Apple silicon (M4, 128GB unified memory) |
-| **LLM APIs** | Claude (Sonnet/Opus), GPT-4o, Gemini 1.5 Pro, open-source models |
-| **Evaluation stack** | Python, Pydantic schemas, W&B observability |
-| **Secure workflows** | Air-gapped auditing patterns available when required |
-
----
-
-## Recent Certifications or near completion (2025-2026)
-
-- CFA Institute — Data Science for Investment Professionals
-- DeepLearning.AI — Building Evaluations for LLMs
-- DeepLearning.AI - LangChain for LLM Application Development
-- Anthropic — Prompt Engineering Interactive Tutorial
-- Weights & Biases — LLM Monitoring and Observability
-- GitLab — Remote Foundations
-
----
-
-## Data Hygiene
-
-- No MNPI. No employer-confidential process leakage.
-- Public releases use synthetic scenarios and/or public information only.
-- Client work under NDA with clear boundaries.
-- Evals designed to be auditable, reproducible, and versioned.
-
----
 
 ## Career Detail
 
 **Investment & leadership:**
-- Long/short equity PM, buy-side analyst, DOR, CCO (1998–2025); 14 years as PM
-- Sigma Capital (~10 years) — SAC pod, now part of Point72; no down years
-- Balyasny Asset Management; Forstmann; other multi-strat and long-biased platforms
-- Invested through multiple regimes: dot-com aftermath, post-9/11, GFC, EU debt crisis, COVID, 2022 inflation
+- Long/short equity PM, analyst, DOR, CCO (1998–2025); 14 years as PM.
+- Sigma Capital (~10 years) — SAC pod; no down years.
+- Balyasny; Forstmann; other multi-strat and long-biased platforms.
+- Invested through dot-com aftermath, 9/11, GFC, COVID, and 2022 inflation.
 
-**Domain depth:**
-- Global healthcare specialization + cross-sector generalist L/S
-- FDA pathway fluency; active FOIA user
-- Emphasis on alpha-generating shorts (fundamental, catalyst-driven) vs mechanical hedging
+**Education & Certifications:**
+- MS Data Science (Northwestern, 2022).
+- MBA (Rollins) | BA Biology (Miami) | Molecular Genetics PhD student (ABD) — OSU.
+- Certifications (2025-2026): CFA Institute (Data Science); DeepLearning.AI (LLM Evals/LangChain); Weights & Biases (Monitoring).
 
-**Teaching & talent development:**
-- TA and Lecturer for MolBio at Ohio State (1990s) | Taught valuation internally at SAC (2000s)
-- Track record hiring and developing analyst teams in high-accountability environments; no analyst turnover.
+## Data Hygiene
+- No MNPI. No employer-confidential process leakage.
+- pm-to-ai internal process documentation, compliance/standards manual
+- Client work under NDA with clear boundaries.
+- Evals designed to be auditable, reproducible, and versioned.### Disclosures
 
-**Education:**
-- MS Data Science (Northwestern, 2022)
-- MBA (Rollins College) | BA Biology (Miami University) | Molecular Genetics PhD student (2.5 years FT, ABD) — The Ohio State University
+## Disclosures
+- No personal trading activity — available for conflict-free engagements
+- NDA-protected work involving proprietary investment workflows accepted
+- Public repositories contain original samples only — no proprietary or client data
 
----
+## Contact
+www.linkedin.com/in/brad-schonhoft-cfa
 
-## Repository Structure (Intended)
-
+## Repositories
 ```
-/datasets/   — task definitions, scenarios, ground-truth annotations
-/rubrics/    — scoring criteria, failure taxonomies, labeling guidelines
-/scorers/    — deterministic evaluators (schema + grading logic)
-/runs/       — configs, manifests, example outputs, comparison reports
-/docs/       — methodology notes, limitations, contribution standards
-```
+├── 📐 EVALUATION & RUBRICS
+│   ├── investment-workflow-evals        # Institutional workflow evaluation frameworks
+│   ├── llm-long-short-arena             # Adversarial test suites for equity LLM outputs
+│   └── equity-research-scorer           # Automated sell-side/buy-side research grading
+│
+├── 🛠️ TOOLING
+│   ├── dynamic-thesis-vetter            # Real-time investment thesis validation
+│   ├── financial-rlhf-studio            # RLHF dataset generation for finance domain
+│   └── backtest-factor-clinic           # Factor attribution and backtest diagnostics
+│
+└── 🧪 IN DEVELOPMENT
+    ├── biotech-catalyst-evals           # Binary event evaluation (PDUFA, trials)
+    └── short-thesis-stress-tests        # Squeeze risk and short-specific failure modes
 
 
