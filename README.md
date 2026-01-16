@@ -191,15 +191,16 @@ Brad Schonhoft, CFA (chartered 2001)
 
 ## Roadmap (only insofar as it supports delivery)
 
-Near-term (2026):
+Current/Near-term (2026):
 - Publish healthcare eval rubrics plus labeled examples and adversarial variants
 - Expand portfolio/risk tasks (sizing, hedging, factor exposure awareness)
 - Add regression suites capturing failure modes discovered through contract work
+- Sell-side to PM distillation
 
 Longer-term (2h2026-2027)
 - Adjacent workflows where cost of error is high (REIT/real estate frameworks,
   investment committee multi-step logic, sell-side to PM distillation)
-
+- Added/reinforcing domain exports - expanded expertise, significant throughput increases
 
 ## Contact
 
