@@ -129,7 +129,7 @@ Constructing and evaluating inputs designed to expose model failures that matter
 - No MNPI. No employer-confidential process leakage.
 - pm-to-ai internal process documentation, compliance/standards manual
 - Client work under NDA with clear boundaries.
-- Evals designed to be auditable, reproducible, and versioned.### Disclosures
+- Evals designed to be auditable, reproducible, and versioned.
 
 ## Disclosures
 - No personal trading activity — available for conflict-free engagements
