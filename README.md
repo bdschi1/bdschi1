@@ -123,7 +123,7 @@ Constructing and evaluating inputs designed to expose model failures that matter
 **Education & Certifications:**
 - MS Data Science (Northwestern, 2022).
 - MBA (Rollins) | BA Biology (Miami) | Molecular Genetics PhD student (ABD) — OSU.
-- Certifications (2025-2026): CFA Institute (Data Science); DeepLearning.AI (LLM Evals/LangChain); Weights & Biases (Monitoring).
+- Certifications (2025-2026) in-process or completed: CFA Institute (Data Science); DeepLearning.AI (LLM Evals/LangChain); Weights & Biases (Monitoring).
 
 ## Data Hygiene
 - No MNPI. No employer-confidential process leakage.
@@ -132,7 +132,7 @@ Constructing and evaluating inputs designed to expose model failures that matter
 - Evals designed to be auditable, reproducible, and versioned.
 
 ## Disclosures
-- No personal trading activity — available for conflict-free engagements
+- No personal trading activity — available for conflict-free engagements for certain projects
 - NDA-protected work involving proprietary investment workflows accepted
 - Public repositories contain original samples only — no proprietary or client data
 
