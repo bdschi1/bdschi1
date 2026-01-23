@@ -116,7 +116,7 @@ Constructing and evaluating inputs designed to expose model failures that matter
 
 **Investment & leadership:**
 - Long/short equity PM, analyst, DOR, CCO (1998–2025); 14 years as PM.
-- Sigma Capital (~10 years) — SAC pod; no down years.
+- Sigma Capital (~10 years global hc long/short pm) — SAC pod; no down years.
 - Balyasny; Forstmann; other multi-strat and long-biased platforms.
 - Invested through dot-com aftermath, 9/11, GFC, COVID, and 2022 inflation.
 
