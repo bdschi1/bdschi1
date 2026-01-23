@@ -1,5 +1,5 @@
 # pm-to-ai | Domain Expert for AI Evaluation 
-_(Equity L/S and Risk Decomposition)_
+_**Curiosity compounds. So does rigor**
 
 **Former institutional PM translating buy-side judgment into machine-readable structured criteria for LLM training, evaluation, and adversarial testing.**
 
