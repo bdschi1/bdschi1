@@ -1,5 +1,5 @@
 # pm-to-ai | Domain Expert for AI Evaluation 
-_**Curiosity compounds. So does rigor**
+**_"Curiosity compounds. So does rigor"_**
 
 **Former institutional PM translating buy-side judgment into machine-readable structured criteria for LLM training, evaluation, and adversarial testing.**
 
