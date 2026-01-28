@@ -13,9 +13,9 @@
 | **Platforms** | Sigma Capital (now part of Point72), ~10 yrs; Balyasny; Forstmann; others |
 | **CFA** | Chartered 2001 |
 | **MS Data Science** | Northwestern (2022) — ML/Deep Learning specialization |
-| **Domain** | Global Healthcare (GICS 3510/3520; Americas/Europe/India); cross-sector generalist L/S |
+| **Domain** | Global Healthcare (GICS 3510/3520; Americas/Europe/India); cross-sector generalist L/S; ETFs |
 
-pm-to-ai is founder-led today for speed and accountability. As scope warrants, additional domain experts (buy-side, technical, scientific/medcial) are coordinated under a single rubric and QA process.
+pm-to-ai is founder-led today for speed and accountability. As scope warrants, additional domain experts (buy-side, sell-side, finance, strategy, technical, scientific/medcial) are coordinated under a single rubric and QA process.
 
 ## Evaluation Standards
 
@@ -34,27 +34,27 @@ LLM outputs are graded the way an institutional PM reviews analyst work or how p
 | **Bear-case Rigor** | Disconfirming evidence, downside path completeness, and what breaks the thesis. |
 | **Evidence Hygiene** | Clear separation of facts vs. inference vs. speculation; unsupported assertions penalized. |
 | **Information Decay Rate** | Recognizing different information half-lives; identifying where stale data creates negative expected value. |
-| **Reflexivity Recognition** | Understanding that investment actions change market dynamics; thesis validity decays as capital crowds in. |
+| **Reflexivity Recognition** | Understanding that investment actions change market dynamics; thesis validity decays as capital crowds in.|
+| **Value-chain-driven thesis Evaluations** | Mapping to upstream, downstream, competitive value-chain exposures. |
 | **Optionality Asymmetry** | Distinguishing symmetric vs. asymmetric payoff structures; embedded convexity in equity positions. |
 | **Volatility Structure** | Domain knowledge required to model exploitable structure in volatility. |
 | **Pattern Detection** | Hidden correlation surfacing and latent relationships across cross-corpus data. |
 | **Portfolio Risk Rigor** | 'bullpen' portfolios; risk metric design, implementation, and monitoring. |
 | **Thesis Risk Decomposition** | Scoring based on material risks—fundamental, statistical, and market. |
 | **Sizing Focus** | Dynamic position sizing based on conviction and volatility (Kelly criterion). |
-| **Liquidity Regime Contingency** | Position analysis conditioned on market state; liquidity is regime-dependent, not security-fixed. |
-| **Conviction Updates** | Correct updating under conflicting or partial data. |
+| **Conviction Updates** | Correct updating under conflicting or partial data. Does new information change conviction? |
 | **Cost-of-Error Focus** | Whether failures would drive material decision-quality degradation. |
 | **Thematic Trade Builds** | Multi-instrument thesis evaluations. |
 
-### Healthcare / Biotech Specifics
-- Trial design logic (endpoints, power, populations, comparators).
-- Readout interpretation and uncertainty handling.
+### Healthcare Sector Specifics
+- Modeling evals of all subsectors.
+- Clinical trial design logic (endpoints, power, populations, comparators).
+- Event interpretation and uncertainty handling.
 - Regulatory pathway realism (FDA, EMA).
-- Mechanism plausibility vs. narrative-only reasoning.
 - Portfolio modifications and risk management evaluations around major events (e.g., Phase 3 results; macro risks).
 
 ### Short-Selling Expertise
-Experience is weighted toward **alpha-generating short positions**. This informs evaluation of:
+Experience is weighted toward **alpha-generating short positions** as well as porfolio hedging. This informs evaluation of:
 - Short thesis construction and catalyst identification.
 - Downside scenario completeness.
 - Borrow/locate realism and squeeze risk awareness.
@@ -82,10 +82,9 @@ Constructing and evaluating inputs designed to expose model failures that matter
 | **Underpowered Trial** | Describe a Phase 2 trial with underpowered secondary endpoints to test clinical reasoning rigor. |
 | **Post-Catalyst Drift** | Describe Phase 3 trial that hit primary endpoint with stock up; test if manufacturing/label risks are identified. |
 | **Consensus Bear Case** | Ask for a bear case on consensus long to test for disconfirming evidence vs. generic "competition risk." |
-| **GAAP Divergence** | Request thesis on company with material GAAP/non-GAAP divergence to test accounting sensitivity. |
 | **Regime Shift Logic** | Present regime-dependent logic (ZIRP vs. inflation) to test regime shift recognition. |
-| **Merger Arb Model** | Clearly modeled merger arb thesis to test why a spread exists. |
 | **Portfolio Impact** | Focus on carry cost and volatility impact within a broader portfolio. |
+| **Conviction assessments** | Evaluate if new information/datapoints change thesis conviction. |
 
 ---
 
@@ -117,14 +116,17 @@ Constructing and evaluating inputs designed to expose model failures that matter
 **Investment & leadership:**
 - Long/short equity PM, analyst, DOR, CCO (1998–2025); 14 years as PM.
 - Sigma Capital (~10 years global hc long/short pm) — SAC pod; no down years.
-- Balyasny; Forstmann; other multi-strat and long-biased platforms.
+- Balyasny; Forstmann; long-biased platforms.
 - Invested through dot-com aftermath, 9/11, GFC, COVID, and 2022 inflation.
 
 **Education & Certifications:**
 - MS Data Science (Northwestern, 2022).
-- MBA (Rollins) | BA Biology (Miami) | Molecular Genetics PhD student (ABD) — OSU.
-- Certifications (2025-2026) in-process or completed: CFA Institute (Data Science); DeepLearning.AI (LLM Evals/LangChain); Weights & Biases (Monitoring).
-
+- MBA (Rollins) | BA Biology (Miami) | Molecular Genetics PhD student (ABD) — The OSU.
+- Certifications (2025-2026) in-process or completed: DeepLearning.AI – Langchain Apps; Agent Skills with Anthropic
+- Google Cloud - RL from Human Feedback
+- Weights & Biases – LLM Monitoring and Observability
+- Coursera – Machine Learning Engineer certification (IBM); Harnessing LLMs: Strategy, Fine-Tuning & Evaluation
+  
 ## Data Hygiene
 - No MNPI. No employer-confidential process leakage.
 - pm-to-ai internal process documentation, compliance/standards manual
