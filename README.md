@@ -9,7 +9,7 @@
 
 | Credential | Detail |
 |------------|--------|
-| **Investment** | PM / Equity Analyst / Hedge Fund launch, capital raising experience (1998–2023); 14 yrs as PM; ~$750M AUM peak |
+| **Investment** | PM / Equity Analyst / Hedge Fund launch, capital raising experience (2011–2019); 14 yrs as PM; ~$750M AUM peak |
 | **Platforms** | Sigma Capital (now part of Point72), ~10 yrs; Balyasny; Forstmann; others |
 | **CFA** | Chartered 2001 |
 | **MS Data Science** | Northwestern (2022) — ML/Deep Learning specialization |
