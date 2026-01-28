@@ -82,8 +82,7 @@ Constructing and evaluating inputs designed to expose model failures that matter
 | **Underpowered Trial** | Describe a Phase 2 trial with underpowered secondary endpoints to test clinical reasoning rigor. |
 | **Post-Catalyst Drift** | Describe Phase 3 trial that hit primary endpoint with stock up; test if manufacturing/label risks are identified. |
 | **Consensus Bear Case** | Ask for a bear case on consensus long to test for disconfirming evidence vs. generic "competition risk." |
-| **Regime Shift Logic** | Present regime-dependent logic (ZIRP vs. inflation) to test regime shift recognition. |
-| **Portfolio Impact** | Focus on carry cost and volatility impact within a broader portfolio. |
+| **Portfolio Impact** | Focus on carry cost, volatility impact, and event path matching within a broader portfolio. |
 | **Conviction assessments** | Evaluate if new information/datapoints change thesis conviction. |
 
 ---
