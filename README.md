@@ -115,5 +115,75 @@ Demonstrates ability to:
 
 ---
 
+pm-to-ai/
+├── README.md
+│
+├── evals/
+│   ├── 01_equity_thesis/
+│   │   ├── README.md
+│   │   ├── scenarios/
+│   │   │   ├── long_thesis_variants.md
+│   │   │   ├── short_thesis_variants.md
+│   │   │   └── adversarial_cases.md
+│   │   └── rubrics/
+│   │       └── equity_thesis_scoring.md
+│   │
+│   ├── 02_dcf_valuation/
+│   │   ├── README.md
+│   │   ├── scenarios/
+│   │   │   ├── growth_fade_and_terminal_value.md
+│   │   │   ├── cyclicality_and_normalization.md
+│   │   │   └── valuation_failure_modes.md
+│   │   └── rubrics/
+│   │       └── dcf_judgment_scoring.md
+│   │
+│   ├── 03_portfolio_construction/
+│   │   ├── README.md
+│   │   ├── scenarios/
+│   │   │   ├── sizing_and_skew.md
+│   │   │   ├── hedging_vs_intentional_exposure.md
+│   │   │   └── liquidity_and_regime_shifts.md
+│   │   └── rubrics/
+│   │       └── portfolio_construction_scoring.md
+│   │
+│   ├── 04_earnings_analysis/
+│   │   ├── README.md
+│   │   ├── scenarios/
+│   │   │   ├── signal_vs_noise.md
+│   │   │   ├── post_event_second_order_risk.md
+│   │   │   └── information_decay.md
+│   │   └── rubrics/
+│   │       └── earnings_event_scoring.md
+│   │
+│   ├── 05_risk_attribution/
+│   │   ├── README.md
+│   │   ├── scenarios/
+│   │   │   ├── factor_vs_idiosyncratic.md
+│   │   │   ├── process_vs_outcome.md
+│   │   │   └── drawdown_diagnosis.md
+│   │   └── rubrics/
+│   │       └── risk_attribution_scoring.md
+│   │
+│   └── 06_spurious_correlation_and_fragility/
+│       ├── README.md
+│       ├── scenarios/
+│       │   ├── flow_driven_correlations.md
+│       │   ├── narrative_contagion.md
+│       │   ├── regime_dependent_relationships.md
+│       │   └── correlation_decay_cases.md
+│       └── rubrics/
+│           └── spurious_correlation_scoring.md
+│
+├── shared/
+│   ├── eval_card_template.md
+│   ├── universal_scoring_axes.md
+│   └── failure_mode_taxonomy.md
+│
+└── compliance/
+    ├── data_hygiene.md
+    └── disclosure_and_use.md
+
+    
 **Contact:** [www.linkedin.com/in/brad-schonhoft-cfa](http://www.linkedin.com/in/brad-schonhoft-cfa)
 **License:** MIT
+
