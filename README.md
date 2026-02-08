@@ -1,189 +1,30 @@
-# pm-to-ai | Domain Expert Evaluation Frameworks
+# Brad Schonhoft, CFA
 
-Former institutional long/short PM translating **buy-side investment judgment** into **machine-readable evaluation artifacts** for AI model training, assessment, and red-teaming.
+Former institutional long/short portfolio manager building tools and evaluation frameworks that bring buy-side investment judgment to AI systems.
 
----
+These projects exist because LLMs routinely fail at the things that matter most in professional investing: distinguishing alpha from environmental tailwinds, sizing risk correctly, and recognizing when a confident-sounding thesis is structurally fragile. Each repo attacks a different piece of that problem.
 
-## What This Repo Is
-
-A portfolio of **expert-designed evaluation modules** that test whether LLMs can reason correctly in **high-stakes, non-stationary decision environments**.
-
-Focus:
-
-* Decision quality under uncertainty
-* Risk classification and survivability
-* Avoiding fluent but dangerous reasoning
-
-Not focused on:
-
-* Factual recall
-* Signal discovery
-* Spreadsheet mechanics
+All projects are ongoing efforts.
 
 ---
 
-## Core Problem Addressed
+## Projects
 
-LLMs often:
+### [fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)
+Benchmark for evaluating LLM performance on financial reasoning tasks. 306 curated problems across seven categories — earnings analysis, DCF valuation, fraud detection, catalyst identification, quant model auditing, financial statement analysis, and portfolio risk. Supports Claude, GPT-4, and open-source models with a leaderboard and filtering by category and difficulty.
 
-* Sound correct while misclassifying **environmental effects as alpha**
-* Overfit narratives
-* Ignore regime dependence and fragility
-* Optimize explanations instead of survivability
+### [investment-workflow-evals](https://github.com/bdschi1/investment-workflow-evals)
+Evaluation scenarios that test AI financial reasoning against institutional standards. Covers equity thesis construction, DCF valuation, portfolio construction, and risk attribution. Each scenario includes weighted rubrics, golden answers, and adversarial examples designed to expose common failure modes like confusing environmental tailwinds with company-specific alpha.
 
-This repo encodes **institutional judgment standards** to detect those failures.
+### [financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)
+Direct Preference Optimization workflow where financial analysts correct AI-generated analysis of real documents (10-Ks, research notes) to build training datasets. Includes RAG-enhanced generation, side-by-side annotation, visual diff tracking, and a categorized error taxonomy covering hallucinations, accounting standard confusion, and tone mismatches.
 
----
+### [excel-model-eval](https://github.com/bdschi1/excel-model-eval)
+Forensic analysis of Excel-based financial models using graph theory. Converts workbooks into directed acyclic graphs to detect hard-coded overrides, circular references, accounting mismatches, and broken links that manual review misses. Optional LLM integration with explicit guardrails keeping AI reasoning separate from execution control.
 
-## Repository Structure (6 Evaluation Modules)
-
-1. **Equity Thesis Evaluation**
-   Variant views, evidence hygiene, bear cases, conviction updates, optionality.
-
-2. **DCF & Valuation Judgment**
-   Assumption discipline, terminal value risk, normalization vs uncertainty.
-
-3. **Portfolio Construction**
-   Risk-based sizing, hedging vs intentional exposure, correlation instability.
-
-4. **Earnings & Event Interpretation**
-   Signal vs noise, information decay, post-event second-order risks.
-
-5. **Risk Attribution**
-   Factor vs idiosyncratic outcomes, hypothesis falsification, process vs P&L.
-
-6. **Spurious Correlation & Fragility**
-   Classification and management of predictive but non-causal relationships.
-   Tests whether a model can **use correlations without believing them**.
+### [redflag_ex1_analyst](https://github.com/bdschi1/redflag_ex1_analyst)
+Rule-based red-teaming engine that scans analyst notes, research PDFs, and IC memos for MNPI, tipping, and regulatory arbitrage risks.
 
 ---
 
-## Evaluation Methodology
-
-All modules share a common rubric.
-
-**Universal scoring axes (0–3):**
-
-1. Correct classification (alpha vs environment vs regime)
-2. Fragility and regime awareness
-3. Explicit risk treatment (sizing, hedging, decay)
-4. **Critical failure avoidance**
-   → Misclassified environmental or spurious correlation as durable alpha
-
-Each scenario includes:
-
-* Clear task prompt
-* Explicit grading rubric
-* Anchor answers (strong / acceptable / failing)
-* Adversarial variants that sound intelligent but are wrong
-
----
-
-## Domain Focus
-
-Healthcare equity (biotech, pharma, medtech, tools, services).
-
-Chosen because it naturally embeds:
-
-* Binary outcomes
-* Skew and convexity
-* Reflexivity and crowding
-* Regulatory and policy risk
-
----
-
-## Intended Use
-
-* Model evaluation and benchmarking
-* RLHF / preference-learning datasets
-* Red-teaming financial reasoning
-* Human-in-the-loop training workflows
-
-Demonstrates ability to:
-
-* Convert tacit expert judgment into evaluable structure
-* Design high-signal failure-mode tests
-* Evaluate reasoning, not just answers
-
----
-
-## Data & Compliance
-
-* No MNPI
-* No employer-confidential processes
-* Synthetic, auditable, versioned scenarios
-
----
-
-pm-to-ai/
-├── README.md
-│
-├── evals/
-│   ├── 01_equity_thesis/
-│   │   ├── README.md
-│   │   ├── scenarios/
-│   │   │   ├── long_thesis_variants.md
-│   │   │   ├── short_thesis_variants.md
-│   │   │   └── adversarial_cases.md
-│   │   └── rubrics/
-│   │       └── equity_thesis_scoring.md
-│   │
-│   ├── 02_dcf_valuation/
-│   │   ├── README.md
-│   │   ├── scenarios/
-│   │   │   ├── growth_fade_and_terminal_value.md
-│   │   │   ├── cyclicality_and_normalization.md
-│   │   │   └── valuation_failure_modes.md
-│   │   └── rubrics/
-│   │       └── dcf_judgment_scoring.md
-│   │
-│   ├── 03_portfolio_construction/
-│   │   ├── README.md
-│   │   ├── scenarios/
-│   │   │   ├── sizing_and_skew.md
-│   │   │   ├── hedging_vs_intentional_exposure.md
-│   │   │   └── liquidity_and_regime_shifts.md
-│   │   └── rubrics/
-│   │       └── portfolio_construction_scoring.md
-│   │
-│   ├── 04_earnings_analysis/
-│   │   ├── README.md
-│   │   ├── scenarios/
-│   │   │   ├── signal_vs_noise.md
-│   │   │   ├── post_event_second_order_risk.md
-│   │   │   └── information_decay.md
-│   │   └── rubrics/
-│   │       └── earnings_event_scoring.md
-│   │
-│   ├── 05_risk_attribution/
-│   │   ├── README.md
-│   │   ├── scenarios/
-│   │   │   ├── factor_vs_idiosyncratic.md
-│   │   │   ├── process_vs_outcome.md
-│   │   │   └── drawdown_diagnosis.md
-│   │   └── rubrics/
-│   │       └── risk_attribution_scoring.md
-│   │
-│   └── 06_spurious_correlation_and_fragility/
-│       ├── README.md
-│       ├── scenarios/
-│       │   ├── flow_driven_correlations.md
-│       │   ├── narrative_contagion.md
-│       │   ├── regime_dependent_relationships.md
-│       │   └── correlation_decay_cases.md
-│       └── rubrics/
-│           └── spurious_correlation_scoring.md
-│
-├── shared/
-│   ├── eval_card_template.md
-│   ├── universal_scoring_axes.md
-│   └── failure_mode_taxonomy.md
-│
-└── compliance/
-    ├── data_hygiene.md
-    └── disclosure_and_use.md
-
-    
-**Contact:** [www.linkedin.com/in/brad-schonhoft-cfa](http://www.linkedin.com/in/brad-schonhoft-cfa)
-**License:** MIT
-
+**Contact:** [linkedin.com/in/brad-schonhoft-cfa](https://www.linkedin.com/in/brad-schonhoft-cfa)
