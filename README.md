@@ -13,7 +13,7 @@ LLMs can sound correct while getting institutional-grade analysis wrong. Failure
 
 - Misclassifying environmental tailwinds as company-specific alpha
 - Overfitting narratives without regime-dependence checks
-- Optimizing explanation quality instead of portfolio survivability / Verbosity and wordsmithing
+- Optimizing explanation quality instead of portfolio survivability
 - Producing incomplete or misleading risk decompositions
 
 This repository encodes institutional judgment standards to detect those failures.
@@ -24,7 +24,7 @@ This repository encodes institutional judgment standards to detect those failure
 
 ### 1. fin-reasoning-eval — Inference Benchmark
 
-Curated benchmark for evaluating LLM financial reasoning. 306 problems (and growing) across seven categories: earnings analysis, DCF valuation, fraud detection, catalyst identification, quant model auditing, financial statement analysis, and portfolio risk. Supports Claude, GPT-4, and open-source models with leaderboard and filtering by category and difficulty.
+Curated benchmark for evaluating LLM financial reasoning. 306 problems across seven categories: earnings analysis, DCF valuation, fraud detection, catalyst identification, quant model auditing, financial statement analysis, and portfolio risk. Supports Claude, GPT-4, and open-source models with leaderboard and filtering by category and difficulty.
 
 ### 2. investment-workflow-evals — Strategic Scoring
 
@@ -40,7 +40,7 @@ Forensic analysis of Excel-based financial models using graph theory. Converts w
 
 ### 5. redflag_ex1_analyst — Compliance Engine
 
-Rule-based red-teaming engine that scans analyst notes, research PDFs, and IC memos for MNPI, tipping, and regulatory arbitrage risks.
+Rule-based red-teaming engine that scans analyst notes, research PDFs, and IC memos for MNPI, tipping, and regulatory arbitrage risks. Flags violations using pattern-matched rule sets and outputs structured risk reports with severity classification and source traceability.
 
 ### 6. institutional-investor-casebook — LLM Evaluation for Institutional Finance
 
@@ -65,18 +65,18 @@ These modules illustrate an end-to-end development lifecycle for specialized dom
 
 - General factual recall or trivia
 - Simple signal discovery (e.g., sentiment classification)
-- Spreadsheet mechanics or formula auditing
+- Basic spreadsheet mechanics or formula syntax checking
 
 ---
 
 ## Data and Compliance
 
 - **No MNPI or employer-confidential data.** All scenarios are synthetic, auditable, and versioned.
-- Built from personal experience and publicly available information.
+- Built from professional experience and publicly available information.
 
 ---
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
 
-pm-to-ai partners - **_"Curiosity compounds. Rigor endures."_**---
+pm-to-ai partners - **_"Curiosity compounds. Rigor endures."_**
