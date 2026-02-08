@@ -42,6 +42,10 @@ Forensic analysis of Excel-based financial models using graph theory. Converts w
 
 Rule-based red-teaming engine that scans analyst notes, research PDFs, and IC memos for MNPI, tipping, and regulatory arbitrage risks.
 
+### 6. institutional-investor-casebook — LLM Evaluation for Institutional Finance
+
+Evaluation framework that benchmarks LLM reasoning against institutional-grade financial analysis. Loads hedge fund case studies from JSONL, runs quantized Llama-3-8B inference with multi-GPU distribution and 4-bit NF4 quantization, and compares model outputs to expert golden answers. Purpose-built for constrained VRAM environments with aggressive memory offloading and deterministic sampling for analytical consistency.
+
 ---
 
 ## AI Training Lifecycle
@@ -69,6 +73,8 @@ These modules illustrate an end-to-end development lifecycle for specialized dom
 
 - **No MNPI or employer-confidential data.** All scenarios are synthetic, auditable, and versioned.
 - Built from personal experience and publicly available information.
+
+---
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
