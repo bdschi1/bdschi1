@@ -20,10 +20,11 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 * **Sector Specialist:** Global Healthcare Sector PM (all GICS/related); transitioned to Multi-Strategy Generalist for final 5 years of tenure.
 
 ### Scientific & Technical Literacy
-* **Research Foundation:** Full-time PhD Student (Molecular Genetics), The Ohio State University; specialized in the **topology of DNA**. TA in Genetics and Physics.
+
 * **Technical Bridge:** MS in Analytics & Modeling, Northwestern 2022.
 * **Capstone Project:** "Predicting Biotech Stock Prices with LSTM Architectures" — applying sequence-based deep learning to volatile healthcare equities.
 * **Domain Depth:** High-level literacy in therapeutics and molecular pathways; expert audit of LLM reasoning in Life Sciences.
+* **Research Foundation:** Full-time PhD Student (ABD; Molecular Genetics), The Ohio State University; specialized in the **topology of DNA**. TA in Genetics and Biology.
 
 ### Failure Pattern Recognition
 * **Cognitive/Technical:** Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias.
