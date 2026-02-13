@@ -1,82 +1,147 @@
-# pm-to-ai | Domain-Expert Evaluation Frameworks
+# Domain Expert — Finance × LLM Evaluation & Alignment × Healthcare Sector PM
 
-## Bridging buy-side judgment and machine intelligence.
-
-
-Expert-designed evaluation modules that test whether LLMs can reason correctly in high-stakes, non-stationary decision environments. Focus areas include: decision quality under uncertainty, risk classification and survivability, and detecting fluent but flawed reasoning.
-
----
-
-## Core Problem
-
-LLMs can sound correct while getting institutional-grade analysis wrong. Failure modes include:
-
-- Misclassifying environmental tailwinds as company-specific alpha
-- Overfitting narratives without regime-dependence checks
-- Optimizing explanation quality instead of portfolio survivability
-- Producing incomplete or misleading risk decompositions
-
-This repository encodes institutional judgment standards to detect those failures.
+* **25 years institutional buy-side experience** (SAC Capital/Sigma/Point72, BAM, WRC).
+* **MS Analytics & Modeling** (ML/Deep Learning), Northwestern 2022.
+* **MBA Finance | CFA® Charterholder**
+* **Scientific Foundation:** PhD (ABD) Research (Molecular Genetics), The Ohio State University.
 
 ---
 
-## Repository Structure 
-
-### 1. fin-reasoning-eval — Inference Benchmark
-
-Curated benchmark for evaluating LLM financial reasoning. 306 problems across seven categories: earnings analysis, DCF valuation, fraud detection, catalyst identification, quant model auditing, financial statement analysis, and portfolio risk. Supports Claude, GPT-4, and open-source models with leaderboard and filtering by category and difficulty.
-
-### 2. investment-workflow-evals — Strategic Scoring
-
-Evaluation scenarios testing AI financial reasoning against institutional standards. Covers equity thesis construction, DCF valuation, portfolio construction, and risk attribution. Each scenario includes weighted rubrics, golden answers, and adversarial examples designed to expose common failure modes (e.g., alpha-beta confusion).
-
-### 3. financial-rlhf-studio — Preference Data (DPO)
-
-Direct Preference Optimization workflow where senior analysts correct AI-generated analysis of real documents (10-Ks, research notes). Includes RAG-enhanced generation, side-by-side annotation, visual diff tracking, and a categorized error taxonomy covering hallucinations, accounting standard confusion, and tone mismatches.
-
-### 4. excel-model-eval — Forensic Graph Analysis
-
-Forensic analysis of Excel-based financial models using graph theory. Converts workbooks into directed acyclic graphs to detect hard-coded overrides, circular references, accounting mismatches, and broken links. Optional LLM integration with explicit guardrails separating AI reasoning from execution control.
-
-### 5. redflag_ex1_analyst — Compliance Engine
-
-Rule-based red-teaming engine that scans analyst notes, research PDFs, and IC memos for MNPI, tipping, and regulatory arbitrage risks. Flags violations using pattern-matched rule sets and outputs structured risk reports with severity classification and source traceability.
-
-### 6. institutional-investor-casebook — LLM Evaluation for Institutional Finance
-
-Evaluation framework that benchmarks LLM reasoning against institutional-grade financial analysis. Loads hedge fund case studies from JSONL, runs quantized Llama-3-8B inference with multi-GPU distribution and 4-bit NF4 quantization, and compares model outputs to expert golden answers. Purpose-built for constrained VRAM environments with aggressive memory offloading and deterministic sampling for analytical consistency.
+### Current Focus
+Evaluating and improving LLM performance on financial reasoning tasks — building the rubrics, adversarial tests, preference data, and multi-agent systems to evaluate if AI models can meet institutional-grade investment standards.
 
 ---
 
-## AI Training Lifecycle
+## I. Institutional Foundation (Domain Expertise)
 
-These modules illustrate an end-to-end development lifecycle for specialized domains:
+### Portfolio Management & Leadership
+* **Institutional Pedigree:** 10 years at SAC Capital/Sigma (Point72) as Senior PM; established track record in building and leading high-performance analyst teams with zero turnover.
+* **AUM & Strategy:** Peak AUM: $750M; concentrated L/S equity; factor-aware risk management and exposure optimization.
+* **Sector Specialist:** Global Healthcare Sector PM (all GICS/related); transitioned to Multi-Strategy Generalist for final 5 years of tenure.
 
-| Stage | Module | Function |
-|---|---|---|
-| **Benchmark** | fin-reasoning-eval | Quantify baseline performance across models |
-| **Preference Data** | financial-rlhf-studio | Encode tacit domain knowledge into structured training artifacts |
-| **Red-Teaming** | redflag_ex1_analyst, investment-workflow-evals | Identify where LLMs break and design tests exposing those failures |
-| **Implementation** | excel-model-eval | Build auditable systems automating tasks previously requiring senior humans |
+### Scientific & Technical Literacy
+* **Research Foundation:** Full-time PhD Student (Molecular Genetics), The Ohio State University; specialized in the **topology of DNA**. TA in Genetics and Physics.
+* **Technical Bridge:** MS in Analytics & Modeling, Northwestern 2022.
+* **Capstone Project:** "Predicting Biotech Stock Prices with LSTM Architectures" — applying sequence-based deep learning to volatile healthcare equities.
+* **Domain Depth:** High-level literacy in therapeutics and molecular pathways; expert audit of LLM reasoning in Life Sciences.
 
----
-
-## Non-Goals
-
-- General factual recall or trivia
-- Simple signal discovery (e.g., sentiment classification)
-- Basic spreadsheet mechanics or formula syntax checking
-
----
-
-## Data and Compliance
-
-- **No MNPI or employer-confidential data.** All scenarios are synthetic, auditable, and versioned.
-- Built from professional experience and publicly available information.
+### Failure Pattern Recognition
+* **Cognitive/Technical:** Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias.
+* **Advanced Institutional Modes:** Reflexivity errors (sentiment vs. catalysts); narrative fallacy (story vs. data); footnote blindness (unaudited headline metrics); tail-risk/convexity bias.
+* **LLM Benchmarking:** Mapping decades of analyst oversight experience to modern LLM evaluation rubrics.
 
 ---
 
-## Contact
-[LinkedIn](https://www.linkedin.com/in/brad-schonhoft-cfa)
+## II. Applied AI Evaluation & Alignment
 
-pm-to-ai partners - **_"Curiosity compounds. Rigor endures."_**
+### Evaluation Methodology
+* **Methods:** RLHF preference data; adversarial red teaming; guardrail/safety taxonomy testing.
+* **Infrastructure:** Scoring rubrics; golden answer authoring; domain-specific fine-tuning (SFT).
+* **Architecture:** Multi-agent orchestration; prompt engineering; role-integrity testing.
+
+### RLHF & Preference Data
+* **Signal:** Authoring preference pairs where domain-expertise signal outweighs stylistic polish.
+* **Criteria:** Transparency of assumptions; quantitative precision; intellectual honesty regarding uncertainty.
+* **Calibration:** Expert-led alignment to distinguish appropriate hedging from evasive output.
+
+---
+
+## III. AI Safety & Strategic Risk
+
+### Adversarial Testing & Red Teaming
+* **Strategy:** Design of multi-turn escalation sequences and persona-based probes targeting safety degradation.
+* **Logic:** Probing beyond first-refusal holds to test deep-layer safety mechanisms.
+* **Traceability:** Hypothesis-driven testing with full conversation path reproducibility.
+
+### Guardrails & Defense Layers
+* **Security Stack:** Evaluation of deterministic filtering, semantic classifiers, and system prompt constraints.
+* **Dynamics:** Assessing dependencies between RLHF safety tuning and real-time output scanning.
+* **Precision:** Surfacing systemic vulnerabilities versus superficial keyword-trigger failures.
+
+### Purple Teaming & Remediation
+* **Feedback Loops:** Translating red team vulnerabilities into refined safety taxonomies and training data.
+* **Remediation:** Improving system prompt constraints and targeted SFT/RLHF updates based on eval artifacts.
+
+### Dual-Use & Communication
+* **Risk Management:** Distinguishing legitimate financial analysis from market manipulation facilitation.
+* **Sensitivity:** Calibrating harm severity to prevent over-blocking (refusals) or under-blocking (leakage).
+* **Reporting:** Mapping complex technical failures to actionable risk reports for non-technical leadership and investment committees.
+
+---
+
+## Repositories
+
+### Evaluation Frameworks
+
+**[investment-workflow-evals](https://github.com/bdschi1/investment-workflow-evals)** — Evaluation suite mapping the institutional investment workflow into machine-readable scoring rubrics. Each stage (thesis → catalysts → sizing → risk → monitoring → post-mortem) has structured criteria, anchor examples for each score level, and adversarial variants designed to trigger specific LLM failure modes: regime-blind extrapolation, confident nonsense on illiquid names, circular reasoning between price targets and valuation multiples.
+
+**[fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)** — 306 finance reasoning problems covering valuation, accounting, credit, and portfolio math. Tests quantitative rigor rather than financial vocabulary — unit economics, share dilution arithmetic, EBITDA-to-FCF bridges, NOL carryforward mechanics, convertible bond math. Each problem has structured metadata, difficulty grading, and golden answers with worked solutions.
+
+**[excel-model-eval](https://github.com/bdschi1/excel-model-eval)** — Framework for evaluating LLM-generated Excel financial models against institutional standards. Checks internal consistency (does the balance sheet balance? does the cash flow statement tie to the income statement?), formula correctness, edge case handling (negative working capital, deferred revenue, circular references in interest expense), and whether outputs are defensible enough to size a position around.
+
+### Red Teaming & RLHF
+
+**[redflag_ex1_analyst](https://github.com/bdschi1/redflag_ex1_analyst)** — Red-flag detection engine for analyst research notes. Rule-based + heuristic system that identifies the patterns experienced PMs look for in junior work: buried or missing assumptions, one-sided risk presentation, stale comparable sets, earnings estimates without sensitivity analysis, and boilerplate filler inflating page count without adding information content. Supports PDF and DOCX ingestion with section-aware parsing and boilerplate filtering. Full CI pipeline with pytest. The approach transfers directly to AI safety red teaming — the same adversarial mindset applied to LLM-generated financial content rather than human analyst work.
+
+**[financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)** — RLHF preference data pipeline for financial domain tuning. Generates paired completions (preferred vs. rejected) with structured annotations capturing the specific dimensions of investment judgment: analytical depth, assumption transparency, risk acknowledgment, quantitative precision, and intellectual honesty about uncertainty. Streamlit interface for human annotation. The goal is preference data where the signal comes from domain expertise, not stylistic polish.
+
+### Multi-Agent Systems
+
+**[multi-agent-investment-committee](https://github.com/bdschi1/multi-agent-investment-committee)** — Multi-agent system simulating a buy-side investment committee with distinct roles: presenting analyst, devil's advocate, risk manager, and portfolio manager. Agents debate through structured rounds with configurable parameters (debate depth, token budgets, temperature). Extracts sentiment, confidence signals, and a directional T-signal from PM output for downstream analysis. Supports multiple LLM providers (Anthropic, OpenAI, Google, Hugging Face, Ollama). HITL review mode enabled by default.
+
+### Portfolio Analytics
+
+**[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — Long/short portfolio construction and analysis toolkit. Performance attribution, drawdown decomposition, rebalancing logic, trade impact modeling, and the risk metrics institutional allocators actually ask about: gross/net exposure, factor concentration, rolling Sharpe, max drawdown duration. Data providers for Yahoo Finance, Bloomberg, and Interactive Brokers. Streamlit dashboard with chart gallery and PM scorecard.
+
+---
+
+### Technical Stack
+
+Python · PyTorch · Hugging Face (transformers, datasets, evaluate) · Weights & Biases · Braintrust · Promptfoo · LangGraph · Streamlit · pandas · SQL · Git
+
+Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) for larger workloads.
+
+---
+
+### Contact:   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/brad-schonhoft-cfa)
+
+---
+
+### <u>References & Bibliography</u>
+
+### Quantitative Finance & Market Theory
+* **Bailey, David H., and Marcos López de Prado.** 2014. "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality." *Journal of Portfolio Management*. [SSRN 2460551](https://ssrn.com/abstract=2460551).
+* **CHSOFT AG.** 2022. *Practical Performance Calculation*. v4.0.
+* **Darmanin, Adam.** n.d. "Language Model Guided Reinforcement Learning in Quantitative Trading." University of Malta.
+* **López de Prado, Marcos.** 2018. *Advances in Financial Machine Learning*. Hoboken, NJ: Wiley.
+* **López de Prado, Marcos.** 2020. *Machine Learning for Asset Managers*. Cambridge: Cambridge University Press.
+* **López de Prado, Marcos.** 2023. *Causal Factor Investing: Can Factor Investing Become Scientific?* Cambridge: Cambridge University Press.
+* **Paleologo, Giuseppe A.** 2021. *Advanced Portfolio Management: A Quant's Guide for Fundamental Investors*. Hoboken, NJ: Wiley. <small>(Focus: Chapters 6–8)</small>
+* **Paleologo, Giuseppe A.** 2024. *The Elements of Quantitative Investing*. Hoboken, NJ: Wiley. <small>(Focus: Sections 3.5, 3.6, 4.4, 4.5, and Chapter 7)</small>
+
+---
+
+### Machine Learning & Artificial Intelligence
+* **Ahmed, Nisha Arya.** 2022. "Vanishing/Exploding Gradients in Deep Neural Networks." *Heartbeat*. [Link](https://medium.com/fritzheartbeat/vanishing-exploding-gradients-in-deep-neural-networks).
+* **Brownlee, Jason.** n.d. *Machine Learning Mastery*. [https://machinelearningmastery.com/](https://machinelearningmastery.com/).
+* **Chollet, François.** 2021. *Deep Learning with Python*. 2nd ed. Manning Publications.
+* **Gao, Hanyao, and Gang Kou, et al.** 2022. "Machine Learning in Business and Finance: A Literature Review and Research Opportunities." *Financial Innovation*. [DOI: 10.1186/s40854-022-00353-8](https://doi.org/10.1186/s40854-022-00353-8).
+* **Géron, Aurélien.** 2022. *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*. 3rd ed. O'Reilly Media.
+* **Géron, Aurélien.** 2023. *Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems*. 1st ed. Sebastopol, CA: O'Reilly Media.
+* **Ha, Vi Q.** n.d. "Building an RLHF Pipeline for LLMs: A Beginner-Friendly Tutorial."
+
+---
+
+### Mental Models & Philosophy
+* **Chivers, Tom.** 2024. *Everything Is Predictable: How Bayesian Statistics Explain Our World*.
+* **Cromwell, David.** n.d. *Richard Feynman's Mental Models*.
+* **Feuerstein, Georg.** 2013. *The Psychology of Yoga: Integrating Eastern and Western Approaches for Understanding the Mind*.
+* **Fraenkel, Ernst.** 1941. *The Dual State: A Contribution to the Theory of Dictatorship*. Oxford University Press.
+* **Dylan, Bob.** *Thematic evolution and narrative complexity.*
+* **Weir, Bob.** *Improvisational theory and structural interplay.*
+
+Among many others.
+
+---
+
+<small>**Note:** This bibliography tracks the theoretical foundations of the Portfolio Lab and Institutional Eval frameworks.</small>
