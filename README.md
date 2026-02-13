@@ -79,7 +79,7 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ---
 
-## Repositories
+## Sample Repositories
 
 ### Evaluation Frameworks
 
