@@ -1,6 +1,6 @@
 # Domain Expert — Finance × LLM Evaluation & Alignment × Healthcare Sector PM
 
-* **25 years institutional buy-side experience** (SAC Capital/Sigma/Point72, BAM, WRC).
+* **>20 years institutional buy-side experience** (SAC Capital/Sigma/Point72, BAM, WRC).
 * **MS Analytics & Modeling** (ML/Deep Learning), Northwestern 2022.
 * **MBA Finance | CFA® Charterholder**
 * **Scientific Foundation:** PhD (ABD) Research (Molecular Genetics), The Ohio State University.
@@ -12,24 +12,21 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ---
 
-## I. Institutional Foundation (Domain Expertise)
+## Institutional Foundation
 
-### Portfolio Management & Leadership
-* **Institutional Pedigree:** 10 years at SAC Capital/Sigma (Point72) as Senior PM; established track record in building and leading high-performance analyst teams with zero turnover.
-* **AUM & Strategy:** Peak AUM: $750M; concentrated L/S equity; factor-aware risk management and exposure optimization.
-* **Sector Specialist:** Global Healthcare Sector PM (all GICS/related); transitioned to Multi-Strategy Generalist for final 5 years of tenure.
+10 years at SAC Capital/Sigma (Point72), Senior PM; >20 years buy-side total across multi-manager and long-biased platforms. Peak AUM $750M; concentrated L/S equity with factor-aware risk management. Built analyst teams with zero turnover.
 
-### Scientific & Technical Literacy
+Global Healthcare — all GICS sub-industries (biotech, large pharma, specialty pharma, life science tools, diagnostics, HCIT, providers, payors/insurance, API/CMO, retail pharmacy). Additional sector experience in technology, industrials, and real estate. US, Western & Eastern Europe, India. Single-name equity L/S; ETFs, futures, statistical baskets, and options for hedging and alpha expression.
 
-* **Technical Bridge:** MS in Analytics & Modeling, Northwestern 2022.
-* **Capstone Project:** "Predicting Biotech Stock Prices with LSTM Architectures" — applying sequence-based deep learning to volatile healthcare equities.
-* **Domain Depth:** High-level literacy in therapeutics and molecular pathways; expert audit of LLM reasoning in Life Sciences.
-* **Research Foundation:** Full-time PhD Student (ABD; Molecular Genetics), The Ohio State University; specialized in the **topology of DNA**. TA in Genetics and Biology.
+### Scientific & Technical Background
+
+MS in Analytics & Modeling, Northwestern 2022. Capstone: "Predicting Biotech Stock Prices with LSTM Architectures" — sequence-based deep learning applied to volatile healthcare equities. PhD student (ABD; Molecular Genetics), The Ohio State University — topology of DNA. TA in Genetics and Biology.
+
+Literacy across the healthcare GICS universe — therapeutics, molecular pathways, medical devices, diagnostics, payor/provider economics, HCIT systems, lifesci/tools and supply chain (API/CMO). 1,000+ corporate 1×1s, investor conferences, field trips, site visits, and medical meetings.
 
 ### Failure Pattern Recognition
-* **Cognitive/Technical:** Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias.
-* **Advanced Institutional Modes:** Reflexivity errors (sentiment vs. catalysts); narrative fallacy (story vs. data); footnote blindness (unaudited headline metrics); tail-risk/convexity bias.
-* **LLM Benchmarking:** Mapping decades of analyst oversight experience to modern LLM evaluation rubrics.
+
+Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias. Reflexivity errors (sentiment vs. catalysts); narrative fallacy (story vs. data); footnote blindness (unaudited headline metrics); tail-risk/convexity bias. Mapping decades of analyst oversight experience to modern LLM evaluation rubrics.
 
 ---
 
