@@ -39,11 +39,19 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 * **Methods:** RLHF preference data; adversarial red teaming; guardrail/safety taxonomy testing.
 * **Infrastructure:** Scoring rubrics; golden answer authoring; domain-specific fine-tuning (SFT).
 * **Architecture:** Multi-agent orchestration; prompt engineering; role-integrity testing.
+* **Benchmarking:** 306-problem finance reasoning benchmark (valuation, accounting, credit, portfolio math) with difficulty grading and multi-model leaderboard; institutional workflow evals covering thesis → catalysts → sizing → risk → monitoring → post-mortem.
+* **Model Audit:** Graph-based structural auditing of LLM-generated Excel models — dependency tracing, circular reference detection, balance sheet consistency checks, complexity scoring.
 
 ### RLHF & Preference Data
 * **Signal:** Authoring preference pairs where domain-expertise signal outweighs stylistic polish.
 * **Criteria:** Transparency of assumptions; quantitative precision; intellectual honesty regarding uncertainty.
 * **Calibration:** Expert-led alignment to distinguish appropriate hedging from evasive output.
+* **Pipeline:** Section-aware document ingestion (10-K/10-Q structure detection); boilerplate filtering reclaiming 13–22% of tokens; K-ranking annotation mode extracting up to 36 pairwise comparisons per session; multi-provider generation (Claude, GPT-4o, Gemini).
+
+### Multi-Agent Systems
+* **Investment Committee Simulation:** Four-agent system (analyst, devil's advocate, risk manager, PM) with structured debate rounds and configurable parameters.
+* **Reasoning Traces:** THINK → PLAN → ACT → REFLECT loop with full trace visibility for evaluation and debugging.
+* **Output Signal:** Directional T-signal (direction × entropy-adjusted confidence) designed as RL input for downstream portfolio systems.
 
 ---
 
