@@ -1,4 +1,4 @@
-# Domain Expert — Finance × LLM Evaluation & Alignment × Healthcare Sector PM
+## Domain Expert — Finance × LLM Evaluation & Alignment × Healthcare Sector PM
 
 * **>20 years institutional buy-side experience** (SAC Capital/Sigma/Point72, BAM, WRC).
 * **MS Analytics & Modeling** (ML/Deep Learning), Northwestern 2022; **MBA Finance | CFA® Charterholder**
