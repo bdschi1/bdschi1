@@ -117,7 +117,7 @@ Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) fo
 
 ---
 
-### <u>References & Bibliography</u>
+### <u>References & Bibliography & Inspiration</u>
 
 ### Quantitative Finance & Market Theory
 * **Bailey, David H., and Marcos López de Prado.** 2014. "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality." *Journal of Portfolio Management*. [SSRN 2460551](https://ssrn.com/abstract=2460551).
