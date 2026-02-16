@@ -6,29 +6,29 @@
 
 ---
 
-### Current Focus
+## Current Focus
 Evaluating and improving LLM performance on financial reasoning tasks — building the rubrics, adversarial tests, preference data, and multi-agent systems to evaluate if AI models can meet institutional-grade investment standards.
 
 ---
 
 ## Institutional Foundation
 
-### Investment Pedigree & Leadership
+#### Investment Pedigree & Leadership
 * **Experience:** 10 years at SAC Capital/Sigma (Point72) as Senior PM; >20 years buy-side total (BAM, WRC).
 * **Track Record:** Built and led high-performance analyst teams with zero turnover.
 * **AUM & Strategy:** Peak AUM $750M; concentrated L/S equity with factor-aware risk management and alpha/beta/noise decomposition.
 * **Instruments:** Single-name L/S; ETFs, futures, statistical baskets, and options for hedging and alpha expression.
 
-### Scientific & Technical Depth
+#### Scientific & Technical Depth
 * **AI/ML:** Capstone: "Predicting Biotech Stock Prices with LSTM Architectures" — sequence-based deep learning applied to volatile healthcare equities.
 * **Hard Science:** Research focus: **Topology of DNA**. TA in Genetics and Physics.
 
-### Healthcare Sector Specialization
+#### Healthcare Sector Specialization
 * **Domain Literacy:** Full-lifecycle expertise across the GICS universe: Biotech, Large/Specialty Pharma, Life Science Tools, Diagnostics, HCIT, Providers/Payors, and API/CMO supply chains.
 * **Due Diligence:** 1,000+ corporate 1×1s, investor conferences, site visits, and medical meetings across the US, Europe, and India.
 * **Multi-Sector Coverage:** Additional generalist experience in Technology, Industrials, and Real Estate.
 
-### Failure Pattern Recognition
+#### Failure Pattern Recognition
 
 Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias. Reflexivity errors (sentiment vs. catalysts); narrative fallacy (story vs. data); footnote blindness (unaudited headline metrics); tail-risk/convexity bias. Mapping decades of analyst oversight experience to modern LLM evaluation rubrics.
 
@@ -36,20 +36,20 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ## II. Applied AI Evaluation & Alignment
 
-### Evaluation Methodology
+#### Evaluation Methodology
 * **Methods:** RLHF preference data; adversarial red teaming; guardrail/safety taxonomy testing.
 * **Infrastructure:** Scoring rubrics; golden answer authoring; domain-specific fine-tuning (SFT).
 * **Architecture:** Multi-agent orchestration; prompt engineering; role-integrity testing.
 * **Benchmarking:** 306-problem finance reasoning benchmark (valuation, accounting, credit, portfolio math) with difficulty grading and multi-model leaderboard; institutional workflow evals covering thesis → catalysts → sizing → risk → monitoring → post-mortem.
 * **Model Audit:** Graph-based structural auditing of LLM-generated Excel models — dependency tracing, circular reference detection, balance sheet consistency checks, complexity scoring.
 
-### RLHF & Preference Data
+#### RLHF & Preference Data
 * **Signal:** Authoring preference pairs where domain-expertise signal outweighs stylistic polish.
 * **Criteria:** Transparency of assumptions; quantitative precision; intellectual honesty regarding uncertainty.
 * **Calibration:** Expert-led alignment to distinguish appropriate hedging from evasive output.
 * **Pipeline:** Section-aware document ingestion (10-K/10-Q structure detection); boilerplate filtering reclaiming 13–22% of tokens; K-ranking annotation mode extracting up to 36 pairwise comparisons per session; multi-provider generation (Claude, GPT-4o, Gemini).
 
-### Multi-Agent Systems
+#### Multi-Agent Systems
 * **Investment Committee Simulation:** Four-agent system (analyst, devil's advocate, risk manager, PM) with structured debate rounds and configurable parameters.
 * **Reasoning Traces:** THINK → PLAN → ACT → REFLECT loop with full trace visibility for evaluation and debugging.
 * **Output Signal:** Directional T-signal (direction × entropy-adjusted confidence) designed as RL input for downstream portfolio systems.
@@ -58,21 +58,21 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ## III. AI Safety & Strategic Risk
 
-### Adversarial Testing & Red Teaming
+#### Adversarial Testing & Red Teaming
 * **Strategy:** Design of multi-turn escalation sequences and persona-based probes targeting safety degradation.
 * **Logic:** Probing beyond first-refusal holds to test deep-layer safety mechanisms.
 * **Traceability:** Hypothesis-driven testing with full conversation path reproducibility.
 
-### Guardrails & Defense Layers
+#### Guardrails & Defense Layers
 * **Security Stack:** Evaluation of deterministic filtering, semantic classifiers, and system prompt constraints.
 * **Dynamics:** Assessing dependencies between RLHF safety tuning and real-time output scanning.
 * **Precision:** Surfacing systemic vulnerabilities versus superficial keyword-trigger failures.
 
-### Purple Teaming & Remediation
+#### Purple Teaming & Remediation
 * **Feedback Loops:** Translating red team vulnerabilities into refined safety taxonomies and training data.
 * **Remediation:** Improving system prompt constraints and targeted SFT/RLHF updates based on eval artifacts.
 
-### Dual-Use & Communication
+#### Dual-Use & Communication
 * **Risk Management:** Distinguishing legitimate financial analysis from market manipulation facilitation.
 * **Sensitivity:** Calibrating harm severity to prevent over-blocking (refusals) or under-blocking (leakage).
 * **Reporting:** Mapping complex technical failures to actionable risk reports for non-technical leadership and investment committees.
@@ -105,7 +105,7 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ---
 
-### Technical Stack
+#### Technical Stack
 
 Python · PyTorch · Hugging Face (transformers, datasets, evaluate) · Weights & Biases · Braintrust · Promptfoo · LangGraph · Streamlit · pandas · SQL · Git
 
@@ -113,13 +113,9 @@ Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) fo
 
 ---
 
-### Contact:   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/brad-schonhoft-cfa)
-
----
-
 ### <u>References & Bibliography & Inspiration</u>
 
-### Quantitative Finance & Market Theory
+#### Quantitative Finance & Market Theory
 * **Bailey, David H., and Marcos López de Prado.** 2014. "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality." *Journal of Portfolio Management*. [SSRN 2460551](https://ssrn.com/abstract=2460551).
 * **CHSOFT AG.** 2022. *Practical Performance Calculation*. v4.0.
 * **Darmanin, Adam.** n.d. "Language Model Guided Reinforcement Learning in Quantitative Trading." University of Malta.
@@ -131,7 +127,7 @@ Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) fo
 
 ---
 
-### Machine Learning & Artificial Intelligence
+#### Machine Learning & Artificial Intelligence
 * **Ahmed, Nisha Arya.** 2022. "Vanishing/Exploding Gradients in Deep Neural Networks." *Heartbeat*. [Link](https://medium.com/fritzheartbeat/vanishing-exploding-gradients-in-deep-neural-networks).
 * **Brownlee, Jason.** n.d. *Machine Learning Mastery*. [https://machinelearningmastery.com/](https://machinelearningmastery.com/).
 * **Chollet, François.** 2021. *Deep Learning with Python*. 2nd ed. Manning Publications.
@@ -142,7 +138,7 @@ Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) fo
 
 ---
 
-### Mental Models & Philosophy
+#### Mental Models & Philosophy
 * **Chivers, Tom.** 2024. *Everything Is Predictable: How Bayesian Statistics Explain Our World*.
 * **Cromwell, David.** n.d. *Richard Feynman's Mental Models*.
 * **Feuerstein, Georg.** 2013. *The Psychology of Yoga: Integrating Eastern and Western Approaches for Understanding the Mind*.
@@ -152,4 +148,4 @@ Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) fo
 
 ---
 
-<small>**Note:** This bibliography tracks the theoretical foundations of the most projects in this repo, most notably Portfolio Lab and Institutional Eval frameworks.</small>
+#### Contact:   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/brad-schonhoft-cfa)
