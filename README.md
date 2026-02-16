@@ -97,7 +97,7 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ### Multi-Agent Systems
 
-**[multi-agent-investment-committee](https://github.com/bdschi1/multi-agent-investment-committee)** — Multi-agent system simulating a buy-side investment committee with distinct roles: presenting analyst, devil's advocate, risk manager, and portfolio manager. Agents debate through structured rounds with configurable parameters (debate depth, token budgets, temperature). Extracts sentiment, confidence signals, and a directional T-signal from PM output for downstream analysis. Supports multiple LLM providers (Anthropic, OpenAI, Google, Hugging Face, Ollama). HITL review mode enabled by default.
+**[multi-agent-investment-committee](https://github.com/bdschi1/multi-agent-investment-committee)** — Four-agent investment committee (sector analyst, risk manager, macro strategist, portfolio manager) built on LangGraph. Agents run in parallel, debate through structured adversarial rounds, and produce a committee memo with a directional T-signal (direction × entropy-adjusted confidence) for downstream RL. Includes a ground-truth eval harness with 6-dimension scoring (direction accuracy, conviction calibration, risk identification, fact coverage, reasoning quality, adversarial robustness), Likert-level mapping, and adversarial context injection testing. 200 tests. Supports Anthropic, OpenAI, Google, DeepSeek, HuggingFace, and Ollama. Bloomberg and IBKR data provider adapters available.
 
 ### Portfolio Analytics
 
