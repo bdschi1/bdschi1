@@ -4,6 +4,8 @@
 * **MS Analytics & Modeling** (ML/Deep Learning), Northwestern 2022; **MBA Finance | CFA® Charterholder**
 * **Scientific Foundation:** PhD (ABD) Research (Molecular Genetics), The Ohio State University; BA Biology/pre-med.
 
+*Curiosity compounds. Rigor endures.*
+
 ---
 
 ## Current Focus
