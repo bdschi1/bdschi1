@@ -73,24 +73,10 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ## AI Safety & Strategic Risk
 
-#### Adversarial Testing & Red Teaming
-* **Strategy:** Design of multi-turn escalation sequences and persona-based probes targeting safety degradation.
-* **Logic:** Probing beyond first-refusal holds to test deep-layer safety mechanisms.
-* **Traceability:** Hypothesis-driven testing with full conversation path reproducibility.
-
-#### Guardrails & Defense Layers
-* **Security Stack:** Evaluation of deterministic filtering, semantic classifiers, and system prompt constraints.
-* **Dynamics:** Assessing dependencies between RLHF safety tuning and real-time output scanning.
-* **Precision:** Surfacing systemic vulnerabilities versus superficial keyword-trigger failures.
-
-#### Purple Teaming & Remediation
-* **Feedback Loops:** Translating red team vulnerabilities into refined safety taxonomies and training data.
-* **Remediation:** Improving system prompt constraints and targeted SFT/RLHF updates based on eval artifacts.
-
-#### Dual-Use & Communication
-* **Risk Management:** Distinguishing legitimate financial analysis from market manipulation facilitation.
-* **Sensitivity:** Calibrating harm severity to prevent over-blocking (refusals) or under-blocking (leakage).
-* **Reporting:** Mapping complex technical failures to actionable risk reports for non-technical leadership and investment committees.
+* **Red Teaming:** Multi-turn escalation sequences and persona-based probes testing safety beyond first-refusal holds. Hypothesis-driven with full conversation path reproducibility.
+* **Guardrails:** Evaluating deterministic filters, semantic classifiers, and system prompt constraints — distinguishing systemic vulnerabilities from superficial keyword-trigger failures.
+* **Purple Teaming:** Translating red team findings into refined safety taxonomies, training data, and targeted SFT/RLHF updates.
+* **Dual-Use Risk:** Calibrating harm severity in financial contexts — distinguishing legitimate analysis from manipulation facilitation, minimizing both over-blocking and leakage.
 
 ---
 
@@ -117,7 +103,7 @@ The maintainer strongly supports Anthropic's leadership and their commitment to 
 
 ---
 
-### <u>References & Bibliography & Inspiration</u>
+### <u>References</u>
 
 #### Quantitative Finance & Market Theory
 * **Bailey, David H., and Marcos López de Prado.** 2014. "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality." *Journal of Portfolio Management*. [SSRN 2460551](https://ssrn.com/abstract=2460551).
