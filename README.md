@@ -1,8 +1,8 @@
-## Domain Expert — Finance × LLM Evaluation & Alignment × Healthcare Sector PM
+## An open and evolving collection of repos exploring how AI, fundamental, and quantitative methods apply to institutional investment research. 
 
-* **>20 years institutional buy-side experience** (SAC Capital/Sigma/Point72, BAM, WRC).
-* **MS Analytics & Modeling** (ML/Deep Learning), Northwestern 2022; **MBA Finance | CFA® Charterholder**
-* **Scientific Foundation:** PhD (ABD) Research (Molecular Genetics), The Ohio State University; BA Biology/pre-med.
+Ideas come from experience managing long/short institutional equity portfolios, academic research we are fortunate to have access to, and the open-source community. Each repo is both a working tool and a learning exercise — built to educate and be educated by. Input and perspectives are welcome. 
+
+Created and maintained by a former long/short equity portfolio manager with 20+ years of institutional buy-side experience.
 
 *Curiosity compounds. Rigor endures.*
 
@@ -13,30 +13,43 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ---
 
-## Institutional Foundation
+## Sample Repositories
 
-#### Investment Pedigree & Leadership
-* **Experience:** 10 years at SAC Capital/Sigma (Point72) as Senior PM; >20 years buy-side total (BAM, WRC).
-* **Track Record:** Built and led high-performance analyst teams with zero turnover.
-* **AUM & Strategy:** Peak AUM $750M; concentrated L/S equity with factor-aware risk management and alpha/beta/noise decomposition.
-* **Instruments:** Single-name L/S; ETFs, futures, statistical baskets, and options for hedging and alpha expression.
+### Evaluation Frameworks
 
-#### Scientific & Technical Depth
-* **AI/ML:** Capstone: "Predicting Biotech Stock Prices with LSTM Architectures" — sequence-based deep learning applied to volatile healthcare equities.
-* **Hard Science:** Research focus: **Topology of DNA**. TA in Genetics and Physics.
+**[investment-workflow-evals](https://github.com/bdschi1/investment-workflow-evals)** — Scoring rubrics for the full institutional workflow (thesis → catalysts → sizing → risk → monitoring → post-mortem). Adversarial variants target specific LLM failure modes: regime-blind extrapolation, confident nonsense on illiquid names, circular reasoning between price targets and multiples.
 
-#### Healthcare Sector Specialization
-* **Domain Literacy:** Full-lifecycle expertise across the GICS universe: Biotech, Large/Specialty Pharma, Life Science Tools, Diagnostics, HCIT, Providers/Payors, and API/CMO supply chains.
-* **Due Diligence:** 1,000+ corporate 1×1s, investor conferences, site visits, and medical meetings across the US, Europe, and India.
-* **Multi-Sector Coverage:** Additional generalist experience in Technology, Industrials, and Real Estate.
+**[fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)** — 306 finance reasoning problems (valuation, accounting, credit, portfolio math) with difficulty grading and worked solutions. Tests quantitative rigor, not financial vocabulary.
 
-#### Failure Pattern Recognition
+### Red Teaming & Compliance
 
-Anchoring on stale consensus; asymmetric risk framing; false precision; backtest survivorship bias. Reflexivity errors (sentiment vs. catalysts); narrative fallacy (story vs. data); footnote blindness (unaudited headline metrics); tail-risk/convexity bias. Mapping decades of analyst oversight experience to modern LLM evaluation rubrics.
+**[redflag-ex1-analyst](https://github.com/bdschi1/redflag-ex1-analyst)** — Rule-based red-flag detection for analyst research notes. Identifies buried assumptions, one-sided risk presentation, stale comps, missing sensitivity analysis, and filler content. PDF/DOCX ingestion with section-aware parsing. Same adversarial mindset applied to LLM-generated financial content.
+
+### Multi-Agent Systems
+
+**[multi-agent-investment-committee](https://github.com/bdschi1/multi-agent-investment-committee)** — Five-agent investment committee (sector analyst, short analyst, risk manager, macro analyst, portfolio manager) on LangGraph. Parallel assessments, structured debate, committee memo with position sizing. 6-dimension eval harness, Shapley attribution, 6 portfolio optimizers. Multi-provider LLM support. Bloomberg and IBKR adapters available.
+
+### Backtesting
+
+**[backtest-lab](https://github.com/bdschi1/backtest-lab)** — Event-driven backtesting with realistic execution (spread, market impact, slippage, commission, borrow costs). Regime detection (threshold + HMM). Statistical inference (PSR, MinTRL, FDR corrections). Bias guards for lookahead leakage, walk-forward degradation, and overfitting. Bridges to MAIC, ls-portfolio-lab, redflag, and fund-tracker-13f.
+
+### Research RAG
+
+**[investment-research-rag](https://github.com/bdschi1/investment-research-rag)** — Document ingestion and retrieval for SEC filings, earnings transcripts, equity research, and Excel models. 6 document-type chunkers, hybrid search (dense + BM25/RRF), cross-encoder reranking, citation traceability. FAISS and OpenSearch backends.
+
+### Portfolio Analytics
+
+**[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — L/S portfolio construction and risk analysis. Performance attribution, drawdown decomposition, rebalancing, trade impact modeling. Gross/net exposure, factor concentration, rolling Sharpe, max drawdown duration. Yahoo, Bloomberg, and IB data providers. Streamlit dashboard.
 
 ---
 
-## II. Applied AI Evaluation & Alignment
+## How the Repos Relate
+
+![Tier 1 Repository Ecosystem](tier1_repo_ecosystem.png)
+
+---
+
+## Applied AI Evaluation & Alignment
 
 #### Evaluation Methodology
 * **Methods:** RLHF preference data; adversarial red teaming; guardrail/safety taxonomy testing.
@@ -58,7 +71,7 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ---
 
-## III. AI Safety & Strategic Risk
+## AI Safety & Strategic Risk
 
 #### Adversarial Testing & Red Teaming
 * **Strategy:** Design of multi-turn escalation sequences and persona-based probes targeting safety degradation.
@@ -81,29 +94,10 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 
 ---
 
-## Sample Repositories
+## Background
 
-### Evaluation Frameworks
+Over 20 years institutional buy-side experience (PM/Analyst | L/S equity |SAC/Point72, WRC)). MBA Finance. MS Analytics & Modeling (ML/Deep Learning). Northwestern. CFA® Charterholder. 
 
-**[investment-workflow-evals](https://github.com/bdschi1/investment-workflow-evals)** — Evaluation suite mapping the institutional investment workflow into machine-readable scoring rubrics. Each stage (thesis → catalysts → sizing → risk → monitoring → post-mortem) has structured criteria, anchor examples for each score level, and adversarial variants designed to trigger specific LLM failure modes: regime-blind extrapolation, confident nonsense on illiquid names, circular reasoning between price targets and valuation multiples.
-
-**[fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)** — 306 finance reasoning problems covering valuation, accounting, credit, and portfolio math. Tests quantitative rigor rather than financial vocabulary — unit economics, share dilution arithmetic, EBITDA-to-FCF bridges, NOL carryforward mechanics, convertible bond math. Each problem has structured metadata, difficulty grading, and golden answers with worked solutions.
-
-**[excel-model-eval](https://github.com/bdschi1/excel-model-eval)** — Framework for evaluating LLM-generated Excel financial models against institutional standards. Checks internal consistency (does the balance sheet balance? does the cash flow statement tie to the income statement?), formula correctness, edge case handling (negative working capital, deferred revenue, circular references in interest expense), and whether outputs are defensible enough to size a position around.
-
-### Red Teaming & RLHF
-
-**[redflag_ex1_analyst](https://github.com/bdschi1/redflag_ex1_analyst)** — Red-flag detection engine for analyst research notes. Rule-based + heuristic system that identifies the patterns experienced PMs look for in junior work: buried or missing assumptions, one-sided risk presentation, stale comparable sets, earnings estimates without sensitivity analysis, and boilerplate filler inflating page count without adding information content. Supports PDF and DOCX ingestion with section-aware parsing and boilerplate filtering. Full CI pipeline with pytest. The approach transfers directly to AI safety red teaming — the same adversarial mindset applied to LLM-generated financial content rather than human analyst work.
-
-**[financial-rlhf-studio](https://github.com/bdschi1/financial-rlhf-studio)** — RLHF preference data pipeline for financial domain tuning. Generates paired completions (preferred vs. rejected) with structured annotations capturing the specific dimensions of investment judgment: analytical depth, assumption transparency, risk acknowledgment, quantitative precision, and intellectual honesty about uncertainty. Streamlit interface for human annotation. The goal is preference data where the signal comes from domain expertise, not stylistic polish.
-
-### Multi-Agent Systems
-
-**[multi-agent-investment-committee](https://github.com/bdschi1/multi-agent-investment-committee)** — Four-agent investment committee (sector analyst, risk manager, macro strategist, portfolio manager) built on LangGraph. Agents run in parallel, debate through structured adversarial rounds, and produce a committee memo with a directional T-signal (direction × entropy-adjusted confidence) for downstream RL. Includes a ground-truth eval harness with 6-dimension scoring (direction accuracy, conviction calibration, risk identification, fact coverage, reasoning quality, adversarial robustness), Likert-level mapping, and adversarial context injection testing. 200 tests. Supports Anthropic, OpenAI, Google, DeepSeek, HuggingFace, and Ollama. Bloomberg and IBKR data provider adapters available.
-
-### Portfolio Analytics
-
-**[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — Long/short portfolio construction and analysis toolkit. Performance attribution, drawdown decomposition, rebalancing logic, trade impact modeling, and the risk metrics institutional allocators actually ask about: gross/net exposure, factor concentration, rolling Sharpe, max drawdown duration. Data providers for Yahoo Finance, Bloomberg, and Interactive Brokers. Streamlit dashboard with chart gallery and PM scorecard.
 
 ---
 
@@ -112,6 +106,14 @@ Anchoring on stale consensus; asymmetric risk framing; false precision; backtest
 Python · PyTorch · Hugging Face (transformers, datasets, evaluate) · Weights & Biases · Braintrust · Promptfoo · LangGraph · Streamlit · pandas · SQL · Git
 
 Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) for larger workloads.
+
+---
+
+#### AI Platform
+
+Claude (Anthropic) is the preferred model across all LLM-integrated repos. Multi-agent, evaluation, and generation modules are built around Claude where applicable.
+
+The maintainer strongly supports Anthropic's leadership and their commitment to treating AI safety and moral responsibility with the same rigor as capability.
 
 ---
 
