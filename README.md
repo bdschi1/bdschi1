@@ -131,8 +131,6 @@ The maintainer strongly supports Anthropic's leadership and their commitment to 
 #### Mental Models & Philosophy
 * **Chivers, Tom.** 2024. *Everything Is Predictable: How Bayesian Statistics Explain Our World*.
 * **Cromwell, David.** n.d. *Richard Feynman's Mental Models*.
-* **Feuerstein, Georg.** 2013. *The Psychology of Yoga: Integrating Eastern and Western Approaches for Understanding the Mind*.
-* **Fraenkel, Ernst.** 1941. *The Dual State: A Contribution to the Theory of Dictatorship*. Oxford University Press.
 * **Dylan, Bob.** *Thematic evolution and narrative complexity.*
 * **Weir, Bob.** *Improvisational theory and structural interplay.*
 
