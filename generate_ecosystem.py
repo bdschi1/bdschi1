@@ -28,6 +28,7 @@ C_TITLE = "#2a2a2a"
 C_SUBTITLE = "#888888"
 C_ROW_BG_1 = "#f0f0f0"
 C_ROW_BG_2 = "#f8f8f8"
+C_ORCH = "#7a6e8a"          # muted purple for orchestration layer
 
 # ── Workflow columns (x-axis) ─────────────────────────────────────────
 columns = [
@@ -102,6 +103,25 @@ def repo_box(cx, cy, w, h, label, color, fontsize=10):
         ha="center", va="center",
     )
 
+# ── Orchestration layer (research-toolkit) ───────────────────────────
+orch_y = 6.45
+orch_rect = FancyBboxPatch(
+    (3.5, orch_y - 0.25), 7.0, 0.5,
+    boxstyle="round,pad=0.1",
+    facecolor=C_ORCH, edgecolor="none", linewidth=0, alpha=0.85,
+)
+ax.add_patch(orch_rect)
+ax.text(
+    7.0, orch_y, "research-toolkit",
+    fontsize=10, fontweight="bold", color=C_BOX_TEXT,
+    ha="center", va="center",
+)
+ax.text(
+    7.0, orch_y - 0.15, "Claude plugin · orchestrates all repos",
+    fontsize=7, color="#d0d0d0",
+    ha="center", va="center",
+)
+
 # ── Place repos in grid ──────────────────────────────────────────────
 box_w = 1.4
 box_h = 0.7
@@ -116,6 +136,7 @@ repo_box(col_centers[5] - 0.35, row_y[0] - 0.35, box_sm_w, box_sm_h, "excel-eval
 repo_box(col_centers[6] + 0.05, row_y[0] - 0.35, box_sm_w, box_sm_h, "casebook", C_EVAL, 9)
 
 # Row: Decision (y=3.8)
+repo_box(col_centers[1], row_y[1], box_w, box_h, "CGF", C_DECISION)
 repo_box(col_centers[2], row_y[1], box_w, box_h, "MAIC", C_DECISION)
 repo_box(col_centers[5], row_y[1], box_w, box_h, "redflag", C_DECISION)
 

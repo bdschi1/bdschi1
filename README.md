@@ -65,7 +65,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 * **Pipeline:** Section-aware document ingestion (10-K/10-Q structure detection); boilerplate filtering reclaiming 13–22% of tokens; K-ranking annotation mode extracting up to 36 pairwise comparisons per session; multi-provider generation (Claude, GPT-4o, Gemini).
 
 #### Multi-Agent Systems
-* **Investment Committee Simulation:** Four-agent system (analyst, devil's advocate, risk manager, PM) with structured debate rounds and configurable parameters.
+* **Investment Committee Simulation:** Five-agent system (long analyst, short analyst, risk manager, macro analyst, PM) with structured debate rounds and configurable parameters.
 * **Reasoning Traces:** THINK → PLAN → ACT → REFLECT loop with full trace visibility for evaluation and debugging.
 * **Output Signal:** Directional T-signal (direction × entropy-adjusted confidence) designed as RL input for downstream portfolio systems.
 
@@ -82,7 +82,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ## Background
 
-Over 20 years institutional buy-side experience (PM/Analyst | L/S equity |SAC/Point72, WRC)). MBA Finance. MS Analytics & Modeling (ML/Deep Learning). Northwestern. CFA® Charterholder. 
+Over 20 years institutional buy-side experience (PM/Analyst | L/S equity | SAC/Point72, WRC). MBA Finance. MS Analytics & Modeling (ML/Deep Learning). Northwestern. CFA® Charterholder.
 
 
 ---
