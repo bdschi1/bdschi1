@@ -43,7 +43,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ![Tier 1 Repository Ecosystem](tier1_repo_ecosystem.png)
 
----
+---<small>*note, certain modules are private repos*</small>---
 
 ## Applied AI Evaluation & Alignment
 
