@@ -33,10 +33,6 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **[backtest-lab](https://github.com/bdschi1/backtest-lab)** — Event-driven backtesting with realistic execution (spread, market impact, slippage, commission, borrow costs). Regime detection (threshold + HMM). Statistical inference (PSR, MinTRL, FDR corrections). Bias guards for lookahead leakage, walk-forward degradation, and overfitting. Bridges to MAIC, ls-portfolio-lab, redflag, and fund-tracker-13f.
 
-### Research RAG
-
-**[investment-research-rag](https://github.com/bdschi1/investment-research-rag)** — Document ingestion and retrieval for SEC filings, earnings transcripts, equity research, and Excel models. 6 document-type chunkers, hybrid search (dense + BM25/RRF), cross-encoder reranking, citation traceability. FAISS and OpenSearch backends.
-
 ### Portfolio Analytics
 
 **[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — L/S portfolio construction and risk analysis. Performance attribution, drawdown decomposition, rebalancing, trade impact modeling. Gross/net exposure, factor concentration, rolling Sharpe, max drawdown duration. Yahoo, Bloomberg, and IB data providers. Streamlit dashboard.
