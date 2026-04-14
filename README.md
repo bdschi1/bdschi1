@@ -27,6 +27,8 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **institutional-investor-casebook** *(private)* — Case studies testing institutional investment reasoning across strategies and market regimes.
 
+**kiln** *(private)* — Multi-pipeline toolchain for producing professional-grade financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,200+ tests.
+
 ### Decision & Risk
 
 **[conviction-gradient-framework](https://github.com/bdschi1/conviction-gradient-framework)** — Conviction scoring and position sizing framework. Maps qualitative thesis strength to quantitative allocation signals.
@@ -41,15 +43,19 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **[backtest-lab](https://github.com/bdschi1/backtest-lab)** — Event-driven backtesting with realistic execution modeling. Regime detection (threshold + HMM). Statistical inference (PSR, MinTRL, FDR). Bias guards for lookahead leakage and overfitting.
 
-**investment-research-rag** *(private)* — Document ingestion and retrieval for SEC filings, earnings transcripts, equity research. Hybrid search (dense + BM25/RRF), cross-encoder reranking, citation traceability.
+**investment-research-rag** *(private)* — Document ingestion and retrieval for SEC filings, earnings transcripts, equity research. Hybrid search (dense + BM25/RRF), cross-encoder reranking, citation traceability. 1,000+ tests.
 
 **fund-tracker-13f** *(private)* — Institutional holdings analysis from SEC 13F filings.
 
-### Data Layer
+### Data & Infrastructure
 
 **[financial-data-providers](https://github.com/bdschi1/financial-data-providers)** — Shared market data provider package with adapter pattern. Yahoo, Bloomberg, IBKR. Used by MAIC, backtest-lab, ls-portfolio-lab.
 
-**sec-financial-model-builder** *(private)* — Builds professional-grade Excel financial models from SEC EDGAR XBRL data. LLM-assisted concept mapping and narrative generation (Anthropic/Gemini).
+**sec-financial-model-builder** *(private)* — Builds professional-grade Excel financial models from SEC EDGAR XBRL data. LLM-assisted concept mapping and narrative generation (Anthropic/Gemini). 1,290+ tests.
+
+**investment-research-toolkit** *(private)* — Claude plugin for institutional investment research — 8 skills, 8 commands, 11 MCP data connectors. Orchestration layer across the repo ecosystem.
+
+**ai-finance-prompt-library** *(private)* — Curated prompt engineering library for AI-powered finance — 15 YAML prompt specs with loader and playbooks. Investment analysis, valuation, RAG, evaluation.
 
 ---
 
@@ -121,7 +127,6 @@ The maintainer strongly supports Anthropic's leadership and their commitment to 
 * **López de Prado, Marcos.** 2020. *Machine Learning for Asset Managers*. Cambridge: Cambridge University Press.
 * **López de Prado, Marcos.** 2023. *Causal Factor Investing: Can Factor Investing Become Scientific?* Cambridge: Cambridge University Press.
 * **Paleologo, Giuseppe A.** 2021. *Advanced Portfolio Management: A Quant's Guide for Fundamental Investors*. Hoboken, NJ: Wiley. <small>(Focus: Chapters 6–8)</small>
-* **Paleologo, Giuseppe A.** 2024. *The Elements of Quantitative Investing*. Hoboken, NJ: Wiley. <small>(Focus: Sections 3.5, 3.6, 4.4, 4.5, and Chapter 7)</small>
 
 ---
 
