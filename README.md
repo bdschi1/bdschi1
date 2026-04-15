@@ -1,6 +1,6 @@
 ## An open and evolving collection of repos exploring how AI, fundamental, and quantitative methods apply to institutional investment research.
 
-Deconstructing institutional finance domain expertise into code. Drawing on long/short equity management and academic research, these repositories are working and learning tools built to structure workflows and train AI models. Input and perspectives are always welcome.
+Deconstructing institutional finance domain expertise into code. Drawing on long/short equity portfolio management experience and academic research, these repositories are working and learning tools built to structure workflows and train AI models. Input and perspectives are always welcome.
 
 Created and maintained by a former long/short equity portfolio manager with 20+ years of institutional buy-side experience.
 
