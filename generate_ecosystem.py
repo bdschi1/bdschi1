@@ -1,145 +1,272 @@
-"""Generate the Repository Ecosystem graphic."""
+#!/usr/bin/env python3
+"""Generate the Tier 1 Repository Ecosystem SVG diagram.
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.patches import FancyBboxPatch
+Two-lane design:
+  Top lane  — Investment Pipeline (data → research → decision → portfolio)
+  Bottom lane — Evaluation Framework (tests each pipeline stage)
+  Foundation  — Orchestration layer
+"""
 
-# ── Colors ──
-C_BG = "#FFFFFF"
-C_WORKFLOW_BG = "#6B9E78"
-C_WORKFLOW_TEXT = "#FFFFFF"
-C_TOOLKIT_BG = "#9B8EC4"
-C_TOOLKIT_TEXT = "#FFFFFF"
-C_EVAL_BG = "#A8BFD0"
-C_DECISION_BG = "#3D6E6E"
-C_ANALYTICS_BG = "#5A8F8F"
-C_DATA_BG = "#5A8F8F"
-C_RESEARCH_BG = "#5A8F8F"
-C_BLOCK_TEXT = "#FFFFFF"
-C_BAND_GRAY = "#F5F5F5"
-C_TITLE = "#2C3E50"
-C_SUBTITLE = "#777777"
-C_LABEL = "#555555"
+W, H = 960, 550
+FONT = "Segoe UI, Helvetica Neue, Arial, sans-serif"
 
-fig, ax = plt.subplots(1, 1, figsize=(18, 12))
-fig.patch.set_facecolor(C_BG)
-ax.set_xlim(0, 18)
-ax.set_ylim(0, 12)
-ax.set_aspect("equal")
-ax.axis("off")
+# Layout
+COL_W   = 210
+GAP     = 20
+MARGIN  = int((W - 4 * COL_W - 3 * GAP) / 2)  # 35
+BOX_W   = 194
+BOX_H   = 48
+BOX_R   = 5
+BOX_VGAP = 7
 
-def rounded_box(x, y, w, h, color, text, fontsize=9, bold=False, text_color=C_BLOCK_TEXT):
-    box = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.12",
-                         facecolor=color, edgecolor="none", zorder=3)
-    ax.add_patch(box)
-    weight = "bold" if bold else "normal"
-    ax.text(x + w/2, y + h/2, text, ha="center", va="center",
-            fontsize=fontsize, fontweight=weight, color=text_color, zorder=4)
+# Colors — cream / neutral palette, black text
+PIPE   = "#C8BDAE"   # warm taupe — pipeline boxes
+EVAL   = "#A0937E"   # darker taupe — eval boxes
+DARK   = "#2A2A2A"   # near-black — foundation bar
+HDR_BG = "#E5DDD0"   # warm beige — stage headers
+TXT    = "#1A1A1A"   # black text everywhere
+LBL    = "#6B6358"   # muted brown — lane labels
+ARR    = "#B0A899"   # warm gray — arrows
+BG     = "#FAF8F4"   # cream background
+LTBG   = "#E5DDD0"   # foundation bar text
+BAND   = "#F2EBE0"   # alternating column band
 
-def band(y, h, color=C_BAND_GRAY):
-    rect = mpatches.Rectangle((0, y), 18, h, facecolor=color, edgecolor="none", zorder=1)
-    ax.add_patch(rect)
+# Column geometry
+col_x  = [MARGIN + i * (COL_W + GAP) for i in range(4)]
+col_cx = [x + COL_W / 2 for x in col_x]
+box_lx = [cx - BOX_W / 2 for cx in col_cx]
 
-def row_label(y, text):
-    ax.text(0.3, y, text, ha="left", va="center", fontsize=10,
-            fontweight="bold", color=C_LABEL, zorder=4)
+# ── DATA ──
 
-# ── Title + subtitle (well above green bar) ──
-ax.text(9, 11.6, "Repository Ecosystem", ha="center", va="center",
-        fontsize=22, fontweight="bold", color=C_TITLE, zorder=4)
-ax.text(9, 11.2, "Read left-to-right for workflow sequence  \u00b7  Read bottom-to-top for architecture depth",
-        ha="center", va="center", fontsize=9, color=C_SUBTITLE, zorder=4)
-
-# ── Workflow phases (top green bar) ──
-phases = [
-    "Research &\nData", "Thesis &\nScoring", "IC Review &\nRisk Mgmt",
-    "Portfolio\nConstruction", "Execution &\nBacktest", "Compliance &\nMonitoring", "Evaluation"
+stages = [
+    "Data &amp; Ingestion",
+    "Research &amp; Analysis",
+    "Conviction &amp; Decision",
+    "Portfolio &amp; Backtest",
 ]
-pw = 2.2
-px_start = 1.3
-py = 10.2
-ph = 0.75
 
-bar = FancyBboxPatch((px_start - 0.15, py - 0.05), len(phases) * pw + 0.1, ph + 0.1,
-                      boxstyle="round,pad=0.15", facecolor=C_WORKFLOW_BG, edgecolor="none", zorder=2)
-ax.add_patch(bar)
+pipeline = [
+    [("financial-data-providers", False),
+     ("sec-financial-model-builder", True),
+     ("fund-tracker-13f", True)],
 
-for i, phase in enumerate(phases):
-    cx = px_start + i * pw + pw / 2
-    ax.text(cx, py + ph / 2, phase, ha="center", va="center",
-            fontsize=8.5, fontweight="bold", color=C_WORKFLOW_TEXT, zorder=4)
-    if i < len(phases) - 1:
-        ax.text(px_start + (i + 1) * pw - 0.05, py + ph / 2, "\u00b7",
-                ha="center", va="center", fontsize=14, color="#FFFFFF88", zorder=4)
+    [("investment-research-rag", True),
+     ("knowledge-base", True),
+     ("redflag-ex1-analyst", False)],
 
-# ── research-toolkit bar (wider — spans phases 1-6) ──
-tk_x = px_start + 0.3 * pw
-tk_w = 5.5 * pw
-tk_y = 9.2
-tk_h = 0.55
-rounded_box(tk_x, tk_y, tk_w, tk_h, C_TOOLKIT_BG,
-            "research-toolkit  [P]\nClaude plugin \u00b7 orchestrates all repos",
-            fontsize=8.5, bold=False)
+    [("conviction-gradient-framework", False),
+     ("multi-agent-investment-committee", True)],
 
-# ── EVALUATION row ──
-ey = 8.0
-row_label(ey + 0.25, "Evaluation")
+    [("ls-portfolio-lab", False),
+     ("backtest-lab", False),
+     ("scenario-portfolio-generator", False)],
+]
 
-rounded_box(2.8, ey, 2.0, 0.85, C_EVAL_BG, "fin-reason-\neval", fontsize=9, bold=True)
+evals = [
+    [("fin-reasoning-eval", False),
+     ("kiln", True)],
+    [("investment-workflow-evals", False)],
+    [("excel-model-eval", True),
+     ("institutional-investor-casebook", True)],
+    [("judgment-under-uncertainty-eval", False)],
+]
 
-rounded_box(10.5, ey + 0.45, 2.0, 0.4, C_EVAL_BG, "judgment-eval", fontsize=8, bold=True)
-rounded_box(10.5, ey, 2.0, 0.4, C_EVAL_BG, "excel-eval  [P]", fontsize=8, bold=True)
 
-rounded_box(13.0, ey + 0.45, 2.0, 0.4, C_EVAL_BG, "workflow-evals", fontsize=8, bold=True)
-rounded_box(13.0, ey, 2.0, 0.4, C_EVAL_BG, "casebook  [P]", fontsize=8, bold=True)
+# ── HELPERS ──
 
-# ── DECISION row ──
-dy = 6.4
-band(dy - 0.15, 1.15)
-row_label(dy + 0.35, "Decision")
+def split_name(name, max_len=25):
+    """Split long repo names at a hyphen near the middle."""
+    if len(name) <= max_len:
+        return [name]
+    mid = len(name) // 2
+    best, bd = -1, len(name)
+    for i, c in enumerate(name):
+        if c == "-" and abs(i - mid) < bd:
+            best, bd = i, abs(i - mid)
+    if best > 0:
+        return [name[: best + 1], name[best + 1 :]]
+    return [name]
 
-rounded_box(2.8, dy, 2.0, 0.85, C_DECISION_BG, "CGF", fontsize=10, bold=True)
-rounded_box(5.5, dy, 2.0, 0.85, C_DECISION_BG, "MAIC  [P]", fontsize=10, bold=True)
-rounded_box(10.5, dy, 2.0, 0.85, C_DECISION_BG, "redflag", fontsize=10, bold=True)
 
-# ── ANALYTICS row ──
-ay = 4.7
-row_label(ay + 0.25, "Analytics")
+def make_box(x, y, name, private, color):
+    """Generate SVG elements for a single repo box."""
+    parts = []
+    if private:
+        parts.append(
+            f'  <rect x="{x}" y="{y}" width="{BOX_W}" height="{BOX_H}" '
+            f'rx="{BOX_R}" fill="{BG}" stroke="{color}" '
+            f'stroke-width="1.5" stroke-dasharray="6,3"/>'
+        )
+    else:
+        parts.append(
+            f'  <rect x="{x}" y="{y}" width="{BOX_W}" height="{BOX_H}" '
+            f'rx="{BOX_R}" fill="{color}"/>'
+        )
+    # All text is black
+    nm = split_name(name)
+    cx = x + BOX_W / 2
+    if len(nm) == 1:
+        parts.append(
+            f'  <text x="{cx}" y="{y + BOX_H / 2 + 5}" text-anchor="middle" '
+            f'font-size="13" fill="{TXT}" font-weight="500">{nm[0]}</text>'
+        )
+    else:
+        parts.append(
+            f'  <text x="{cx}" y="{y + BOX_H / 2 - 3}" text-anchor="middle" '
+            f'font-size="12" fill="{TXT}" font-weight="500">{nm[0]}</text>'
+        )
+        parts.append(
+            f'  <text x="{cx}" y="{y + BOX_H / 2 + 12}" text-anchor="middle" '
+            f'font-size="12" fill="{TXT}" font-weight="500">{nm[1]}</text>'
+        )
+    return "\n".join(parts)
 
-# research-rag + fund-tracker grouped
-grp_box = FancyBboxPatch((1.8, ay - 0.1), 3.6, 1.05, boxstyle="round,pad=0.15",
-                          facecolor="#E8EDED", edgecolor="none", zorder=2)
-ax.add_patch(grp_box)
-rounded_box(1.9, ay, 1.6, 0.85, C_ANALYTICS_BG, "research-\nrag  [P]", fontsize=8.5, bold=True)
-rounded_box(3.7, ay, 1.6, 0.85, C_ANALYTICS_BG, "fund-\ntracker  [P]", fontsize=8.5, bold=True)
 
-rounded_box(7.5, ay, 2.0, 0.85, C_ANALYTICS_BG, "ls-portfolio", fontsize=9, bold=True)
-rounded_box(10.0, ay, 2.0, 0.85, C_ANALYTICS_BG, "backtest-lab", fontsize=9, bold=True)
+# ── BUILD SVG ──
 
-# ── DATA row ──
-dy2 = 3.1
-band(dy2 - 0.15, 1.15)
-row_label(dy2 + 0.25, "Data")
+svg = []
+svg.append(
+    f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" '
+    f'font-family="{FONT}">'
+)
+svg.append(f'  <rect width="{W}" height="{H}" fill="{BG}"/>')
 
-rounded_box(1.9, dy2, 2.2, 0.85, C_DATA_BG, "data-\nproviders", fontsize=9, bold=True)
-rounded_box(4.5, dy2, 2.2, 0.85, C_DATA_BG, "SFMB  [P]", fontsize=10, bold=True)
+# Alternating column bands (odd columns get subtle fill)
+for i in [1, 3]:
+    svg.append(
+        f'  <rect x="{col_x[i]}" y="54" width="{COL_W}" '
+        f'height="400" rx="4" fill="{BAND}" opacity="0.5"/>'
+    )
 
-# ── RESEARCH row ──
-ry = 1.5
-row_label(ry + 0.25, "Research")
+# Title
+svg.append(
+    f'  <text x="{W / 2}" y="28" text-anchor="middle" '
+    f'font-size="20" font-weight="700" fill="{TXT}">'
+    f"Repository Ecosystem</text>"
+)
+svg.append(
+    f'  <text x="{W / 2}" y="46" text-anchor="middle" '
+    f'font-size="10.5" fill="{LBL}" letter-spacing="0.5">'
+    f"AI-augmented institutional investment research pipeline</text>"
+)
 
-rounded_box(1.9, ry, 2.5, 0.85, C_RESEARCH_BG, "venclexta  [P]", fontsize=9, bold=True)
-rounded_box(4.8, ry, 2.5, 0.85, C_RESEARCH_BG, "knowledge-\nbase  [P]", fontsize=9, bold=True)
+# Stage headers
+HY, HH = 58, 28
+for i, s in enumerate(stages):
+    svg.append(
+        f'  <rect x="{col_x[i]}" y="{HY}" width="{COL_W}" '
+        f'height="{HH}" rx="4" fill="{HDR_BG}"/>'
+    )
+    svg.append(
+        f'  <text x="{col_cx[i]}" y="{HY + HH / 2 + 4.5}" '
+        f'text-anchor="middle" font-size="12" font-weight="600" '
+        f'fill="{TXT}">{s}</text>'
+    )
 
-# ── Legend ──
-rounded_box(14.0, 1.8, 1.2, 0.5, C_DECISION_BG, "repo", fontsize=8, bold=True)
-ax.text(15.4, 2.05, "= Public", ha="left", va="center", fontsize=9, color=C_LABEL, zorder=4)
-rounded_box(14.0, 1.1, 1.2, 0.5, C_DECISION_BG, "repo [P]", fontsize=8, bold=True)
-ax.text(15.4, 1.35, "= Private", ha="left", va="center", fontsize=9, color=C_LABEL, zorder=4)
+# Flow arrows between stage headers
+hay = HY + HH / 2
+for i in range(3):
+    x1 = col_x[i] + COL_W + 2
+    x2 = col_x[i + 1] - 2
+    svg.append(
+        f'  <line x1="{x1}" y1="{hay}" x2="{x2 - 7}" '
+        f'y2="{hay}" stroke="{ARR}" stroke-width="1.5"/>'
+    )
+    svg.append(
+        f'  <polygon points="{x2},{hay} {x2 - 7},{hay - 3.5} '
+        f'{x2 - 7},{hay + 3.5}" fill="{ARR}"/>'
+    )
 
-plt.tight_layout(pad=0.5)
-plt.savefig("/Users/bdsm4/Desktop/tier1_repo_ecosystem.png",
-            dpi=200, bbox_inches="tight", facecolor=C_BG)
-print("Saved to ~/Desktop/tier1_repo_ecosystem.png")
+# ── INVESTMENT PIPELINE ──
+PLY = 102
+svg.append(
+    f'  <text x="{MARGIN + 2}" y="{PLY}" font-size="9.5" '
+    f'font-weight="700" fill="{LBL}" letter-spacing="1.5">'
+    f"INVESTMENT PIPELINE</text>"
+)
+
+PSY = 114
+for ci in range(4):
+    for ri, (nm, pv) in enumerate(pipeline[ci]):
+        y = PSY + ri * (BOX_H + BOX_VGAP)
+        svg.append(make_box(box_lx[ci], y, nm, pv, PIPE))
+
+pipe_bottom = PSY + 2 * (BOX_H + BOX_VGAP) + BOX_H  # 272
+
+# Vertical connectors: pipeline → eval
+conn_y1 = pipe_bottom + 4
+conn_y2 = pipe_bottom + 28
+for i in range(4):
+    svg.append(
+        f'  <line x1="{col_cx[i]}" y1="{conn_y1}" '
+        f'x2="{col_cx[i]}" y2="{conn_y2}" '
+        f'stroke="{ARR}" stroke-width="1" stroke-dasharray="3,3"/>'
+    )
+    ay = conn_y2
+    svg.append(
+        f'  <polygon points="{col_cx[i]},{ay + 5} '
+        f'{col_cx[i] - 3},{ay} {col_cx[i] + 3},{ay}" fill="{ARR}"/>'
+    )
+
+# ── EVALUATION FRAMEWORK ──
+ELY = conn_y2 + 18
+svg.append(
+    f'  <text x="{MARGIN + 2}" y="{ELY}" font-size="9.5" '
+    f'font-weight="700" fill="{LBL}" letter-spacing="1.5">'
+    f"EVALUATION FRAMEWORK</text>"
+)
+
+ESY = ELY + 12
+for ci in range(4):
+    for ri, (nm, pv) in enumerate(evals[ci]):
+        y = ESY + ri * (BOX_H + BOX_VGAP)
+        svg.append(make_box(box_lx[ci], y, nm, pv, EVAL))
+
+eval_bottom = ESY + 1 * (BOX_H + BOX_VGAP) + BOX_H  # ~435
+
+# ── FOUNDATION BAR ──
+FY = eval_bottom + 18
+FH = 38
+svg.append(
+    f'  <rect x="{MARGIN}" y="{FY}" width="{W - 2 * MARGIN}" '
+    f'height="{FH}" rx="5" fill="{DARK}"/>'
+)
+svg.append(
+    f'  <text x="{W / 2}" y="{FY + FH / 2 + 5}" text-anchor="middle" '
+    f'font-size="12.5" font-weight="500" fill="{LTBG}">'
+    f"investment-research-toolkit \u2014 orchestrates all repos</text>"
+)
+
+# ── LEGEND ──
+LY = FY + FH + 18
+lx1 = W / 2 - 155
+svg.append(
+    f'  <rect x="{lx1}" y="{LY}" width="40" height="18" rx="3" fill="{PIPE}"/>'
+)
+svg.append(
+    f'  <text x="{lx1 + 48}" y="{LY + 13}" font-size="10.5" fill="{LBL}">'
+    f"Public</text>"
+)
+lx2 = W / 2 + 20
+svg.append(
+    f'  <rect x="{lx2}" y="{LY}" width="40" height="18" rx="3" fill="none" '
+    f'stroke="{PIPE}" stroke-width="1.5" stroke-dasharray="6,3"/>'
+)
+svg.append(
+    f'  <text x="{lx2 + 48}" y="{LY + 13}" font-size="10.5" fill="{LBL}">'
+    f"Private</text>"
+)
+
+svg.append("</svg>")
+
+# ── WRITE ──
+import os
+
+out_dir = os.path.dirname(os.path.abspath(__file__))
+out_svg = os.path.join(out_dir, "tier1_repo_ecosystem.svg")
+
+with open(out_svg, "w") as f:
+    f.write("\n".join(svg))
+
+print(f"Generated: {out_svg}")
+print(f"Canvas: {W}x{H}, content ends: ~{LY + 30}px")
