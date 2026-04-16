@@ -105,8 +105,6 @@ Over 20 years institutional buy-side experience (PM/Analyst | L/S equity | SAC/P
 
 Python · PyTorch · Hugging Face (transformers, datasets, evaluate) · Weights & Biases · Braintrust · Promptfoo · LangGraph · Streamlit · pandas · SQL · Git
 
-Local inference on Mac M4 Max (128GB RAM). Lambda Cloud dual-GPU (2× NVIDIA) for larger workloads.
-
 ---
 
 #### AI Platform
