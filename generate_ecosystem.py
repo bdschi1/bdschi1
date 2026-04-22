@@ -64,11 +64,13 @@ pipeline = [
 
 evals = [
     [("fin-reasoning-eval", False),
-     ("kiln", True)],
-    [("investment-workflow-evals", False)],
+     ("kiln-sample", False)],
+    [("investment-workflow-evals", False),
+     ("ai-finance-prompt-library", False)],
     [("excel-model-eval", True),
      ("institutional-investor-casebook", True)],
-    [("judgment-under-uncertainty-eval", False)],
+    [("judgment-under-uncertainty-eval", False),
+     ("tasksmith-sample", False)],
 ]
 
 

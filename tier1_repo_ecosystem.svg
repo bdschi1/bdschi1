@@ -56,10 +56,12 @@
   <text x="32" y="318" font-size="9.5" font-weight="700" fill="#6B6358" letter-spacing="1.5">EVALUATION FRAMEWORK</text>
   <rect x="38.0" y="330" width="194" height="48" rx="5" fill="#A0937E"/>
   <text x="135.0" y="359.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">fin-reasoning-eval</text>
-  <rect x="38.0" y="385" width="194" height="48" rx="5" fill="#FAF8F4" stroke="#A0937E" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="135.0" y="414.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">kiln</text>
+  <rect x="38.0" y="385" width="194" height="48" rx="5" fill="#A0937E"/>
+  <text x="135.0" y="414.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">kiln-sample</text>
   <rect x="268.0" y="330" width="194" height="48" rx="5" fill="#A0937E"/>
   <text x="365.0" y="359.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">investment-workflow-evals</text>
+  <rect x="268.0" y="385" width="194" height="48" rx="5" fill="#A0937E"/>
+  <text x="365.0" y="414.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">ai-finance-prompt-library</text>
   <rect x="498.0" y="330" width="194" height="48" rx="5" fill="#FAF8F4" stroke="#A0937E" stroke-width="1.5" stroke-dasharray="6,3"/>
   <text x="595.0" y="359.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">excel-model-eval</text>
   <rect x="498.0" y="385" width="194" height="48" rx="5" fill="#FAF8F4" stroke="#A0937E" stroke-width="1.5" stroke-dasharray="6,3"/>
@@ -68,6 +70,8 @@
   <rect x="728.0" y="330" width="194" height="48" rx="5" fill="#A0937E"/>
   <text x="825.0" y="351.0" text-anchor="middle" font-size="12" fill="#1A1A1A" font-weight="500">judgment-under-</text>
   <text x="825.0" y="366.0" text-anchor="middle" font-size="12" fill="#1A1A1A" font-weight="500">uncertainty-eval</text>
+  <rect x="728.0" y="385" width="194" height="48" rx="5" fill="#A0937E"/>
+  <text x="825.0" y="414.0" text-anchor="middle" font-size="13" fill="#1A1A1A" font-weight="500">tasksmith-sample</text>
   <rect x="30" y="451" width="900" height="38" rx="5" fill="#2A2A2A"/>
   <text x="480.0" y="475.0" text-anchor="middle" font-size="12.5" font-weight="500" fill="#E5DDD0">investment-research-toolkit — orchestrates all repos</text>
   <rect x="325.0" y="507" width="40" height="18" rx="3" fill="#C8BDAE"/>
