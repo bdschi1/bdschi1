@@ -23,7 +23,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **[judgment-under-uncertainty-eval](https://github.com/bdschi1/judgment-under-uncertainty-eval)** — Evaluates LLM calibration and decision-making under ambiguity in financial contexts.
 
-**excel-model-eval** *(private)* — Graph-based structural auditing of LLM-generated Excel models: dependency tracing, circular reference detection, balance sheet consistency, complexity scoring.
+**[excel-model-eval](https://github.com/bdschi1/excel-model-eval)** — Graph-based structural auditing of LLM-generated Excel models: dependency tracing, circular reference detection, balance sheet consistency, complexity scoring.
 
 **institutional-investor-casebook** *(private)* — Case studies testing institutional investment reasoning across strategies and market regimes.
 
