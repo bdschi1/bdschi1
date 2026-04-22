@@ -97,7 +97,6 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 Over 20 years institutional buy-side experience (PM/Analyst | L/S equity | SAC/Point72, WRC). MBA Finance. MS Analytics & Modeling (ML/Deep Learning). Northwestern. CFA® Charterholder.
 
-
 ---
 
 #### Technical Stack
