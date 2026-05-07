@@ -9,7 +9,7 @@ Created and maintained by a former long/short equity portfolio manager with 20+ 
 ---
 
 ## Current Focus
-Evaluating and improving LLM performance on financial reasoning tasks — building rubrics, adversarial tests, preference data, and multi-agent systems to assess whether AI models can meet institutional-grade investment standards.
+Evaluating and improving LLM performance on financial reasoning tasks — building rubrics, adversarial tests, preference data, and multi-agent systems to assess whether AI models can meet institutional-grade investment standards. Active emphasis on reproducible population-level diagnostics: measuring how committees of agents converge or collapse under realistic decision pressure.
 
 ---
 
@@ -27,7 +27,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **institutional-investor-casebook** *(private)* — Case studies testing institutional investment reasoning across strategies and market regimes.
 
-**kiln** *(private)* — Multi-pipeline toolchain for producing professional-grade financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,200+ tests.
+**kiln** *(private)* — Multi-pipeline toolchain for producing professional-grade financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,150+ tests.
 
 ### Decision & Risk
 
@@ -71,6 +71,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 * **Infrastructure:** Scoring rubrics; golden answer authoring; domain-specific fine-tuning (SFT).
 * **Benchmarking:** 306-problem finance reasoning benchmark with difficulty grading and multi-model leaderboard; institutional workflow evals covering thesis → sizing → risk → monitoring → post-mortem.
 * **Model Audit:** Graph-based structural auditing of LLM-generated Excel models — dependency tracing, circular reference detection, balance sheet consistency.
+* **Population Diagnostics:** Heuristic-collapse audits — measuring whether agent populations converge to homogeneous decision profiles under realistic stress, separating individual model variance from system-level monoculture.
 
 #### RLHF & Preference Data
 * **Signal:** Preference pairs where domain-expertise signal outweighs stylistic polish.
@@ -90,6 +91,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 * **Guardrails:** Evaluating deterministic filters, semantic classifiers, and system prompt constraints.
 * **Purple Teaming:** Translating red team findings into refined safety taxonomies and targeted SFT/RLHF updates.
 * **Dual-Use Risk:** Calibrating harm severity in financial contexts — distinguishing legitimate analysis from manipulation facilitation.
+* **Decision Diversity:** Paper-grounded diagnostics for detecting heuristic collapse in multi-agent committees — a financial-domain analogue to model-monoculture risk in deployed AI systems.
 
 ---
 
@@ -117,7 +119,6 @@ The maintainer strongly supports Anthropic's leadership and their commitment to 
 
 #### Quantitative Finance & Market Theory
 * **Bailey, David H., and Marcos López de Prado.** 2014. "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality." *Journal of Portfolio Management*. [SSRN 2460551](https://ssrn.com/abstract=2460551).
-* **CHSOFT AG.** 2022. *Practical Performance Calculation*. v4.0.
 * **Darmanin, Adam.** n.d. "Language Model Guided Reinforcement Learning in Quantitative Trading." University of Malta.
 * **López de Prado, Marcos.** 2018. *Advances in Financial Machine Learning*. Hoboken, NJ: Wiley.
 * **López de Prado, Marcos.** 2020. *Machine Learning for Asset Managers*. Cambridge: Cambridge University Press.
@@ -133,7 +134,8 @@ The maintainer strongly supports Anthropic's leadership and their commitment to 
 * **Gao, Hanyao, and Gang Kou, et al.** 2022. "Machine Learning in Business and Finance: A Literature Review and Research Opportunities." *Financial Innovation*. [DOI: 10.1186/s40854-022-00353-8](https://doi.org/10.1186/s40854-022-00353-8).
 * **Géron, Aurélien.** 2022. *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*. 3rd ed. O'Reilly Media.
 * **Géron, Aurélien.** 2023. *Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems*. 1st ed. Sebastopol, CA: O'Reilly Media.
-* **Ha, Vi Q.** n.d. "Building an RLHF Pipeline for LLMs: A Beginner-Friendly Tutorial."
+* **Ross, Jillian, and Andrew W. Lo.** 2026. "One Size Fits None: Heuristic Collapse in LLM Investment Advice." arXiv preprint. [arXiv:2604.23837](https://arxiv.org/abs/2604.23837).
+* **Anonymous (under review, ICLR 2025).** "XFinBench: Benchmarking LLMs in Complex Financial Problem Solving and Reasoning." <small>(4,235 graduate-level finance examples; statement judging, MCQA, financial calculation; multi-modal context.)</small>
 
 ---
 
