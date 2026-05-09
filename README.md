@@ -109,9 +109,7 @@ Python · PyTorch · Hugging Face (transformers, datasets, evaluate) · Weights 
 
 #### AI Platform
 
-Claude (Anthropic) is the preferred model across all LLM-integrated repos. Multi-agent, evaluation, and generation modules are built around Claude where applicable.
-
-The maintainer strongly supports Anthropic's leadership and their commitment to treating AI safety and moral responsibility with the same rigor as capability.
+Claude (Anthropic) is the preferred model across all LLM-integrated repos. Multi-agent, evaluation, and generation modules are built around Claude.
 
 ---
 
