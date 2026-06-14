@@ -1,6 +1,6 @@
 ## An open and evolving collection of repos exploring how AI, fundamental, and quantitative methods apply to institutional investment research.
 
-Deconstructing institutional finance domain expertise into code. Drawing on long/short equity portfolio management experience and academic research, these repositories are working and learning tools built to structure workflows and train AI models. Input and perspectives are always welcome.
+Distilling institutional finance domain expertise into code. Built on long/short equity portfolio management experience and academic research, these repositories are working and learning tools to structure workflows and train AI models. Input and perspectives are always welcome.
 
 Created and maintained by a former long/short equity portfolio manager with 20+ years of institutional buy-side experience.
 
@@ -9,7 +9,7 @@ Created and maintained by a former long/short equity portfolio manager with 20+ 
 ---
 
 ## Current Focus
-Evaluating and improving LLM performance on financial reasoning tasks — building rubrics, adversarial tests, preference data, and multi-agent systems to assess whether AI models can meet institutional-grade investment standards. Active emphasis on reproducible population-level diagnostics: measuring how committees of agents converge or collapse under realistic decision pressure.
+Decomposing institutional investment workflow into evaluable, code-readable steps: identify discrete catalysts and quantify their conditional risk/reward (quantitative and fundamental) → map cross-sectional and cross-asset dependencies → encode deterministic event paths → attribute return and risk to systematic (beta) versus idiosyncratic (alpha) drivers, monitoring factor exposure and adjusting it deliberately rather than neutralizing by default → size in portfolio context by idiosyncratic conviction and residual variance. Each step carries an explicit rubric and adversarial tests (discretionary process -> components an AI model can be scored against.)
 
 ---
 
@@ -19,15 +19,17 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **[investment-workflow-evals](https://github.com/bdschi1/investment-workflow-evals)** — Scoring rubrics for the full institutional workflow (thesis → catalysts → sizing → risk → monitoring → post-mortem). Adversarial variants target LLM failure modes: regime-blind extrapolation, confident nonsense on illiquid names, circular reasoning.
 
-**[fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)** — 306 finance reasoning problems (valuation, accounting, credit, portfolio math) with difficulty grading and worked solutions.
+**[fin-reasoning-eval](https://github.com/bdschi1/fin-reasoning-eval)** — 360 finance reasoning problems across 7 categories (earnings surprises, DCF sanity, accounting red flags, catalyst ID, formula audits, statement analysis, risk) and 4 difficulty levels. Multiple-choice ground truth plus weighted-binary rubric grading reasoning quality, not just the chosen letter.
 
-**[judgment-under-uncertainty-eval](https://github.com/bdschi1/judgment-under-uncertainty-eval)** — Evaluates LLM calibration and decision-making under ambiguity in financial contexts.
+**judgment-under-uncertainty-eval** *(private)* — Evaluation of LLM calibration and decision-making under ambiguity in financial contexts.
 
 **[excel-model-eval](https://github.com/bdschi1/excel-model-eval)** — Graph-based structural auditing of LLM-generated Excel models: dependency tracing, circular reference detection, balance sheet consistency, complexity scoring.
 
 **institutional-investor-casebook** *(private)* — Case studies testing institutional investment reasoning across strategies and market regimes.
 
-**kiln** *(private)* — Multi-pipeline toolchain for producing professional-grade financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,150+ tests.
+**kiln** *(private)* — Multi-pipeline toolchain for producing financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,200+ tests.
+
+**kiln-sample** *(private)* — Public-sanitized extract of the kiln eval platform: 52 activity types, 18 robustness checks, 11-phase pipeline, dual rubric/grader-model architecture.
 
 ### Decision & Risk
 
@@ -35,15 +37,17 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **multi-agent-investment-committee** *(private)* — Five-agent IC (sector analyst, short analyst, risk manager, macro analyst, PM) on LangGraph. Structured debate, committee memo with sizing. Shapley attribution, 6 portfolio optimizers. Bloomberg/IBKR adapters.
 
-**[redflag-ex1-analyst](https://github.com/bdschi1/redflag-ex1-analyst)** — Red-flag detection for analyst notes. Identifies buried assumptions, one-sided risk, stale comps, missing sensitivity analysis. PDF/DOCX ingestion with section-aware parsing.
+**[redflag-ex1-analyst](https://github.com/bdschi1/redflag-ex1-analyst)** — Deterministic rule-based red-team gate. Scans analyst notes, research PDFs, and IC memos for MNPI, tipping, regulatory arbitrage, and portfolio-construction traps. Gates output PASS / PM_REVIEW / AUTO_REJECT in under 60 seconds.
 
 ### Analytics & Backtesting
 
-**[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — L/S portfolio construction and risk analysis. Attribution, drawdown decomposition, rebalancing, trade impact. Yahoo, Bloomberg, IB providers. Streamlit dashboard.
+**[ls-portfolio-lab](https://github.com/bdschi1/ls-portfolio-lab)** — L/S equity portfolio risk workbench. 40+ metrics, trade simulator, paper portfolio, PM scorecard. Streamlit + Polars + Plotly.
 
-**[backtest-lab](https://github.com/bdschi1/backtest-lab)** — Event-driven backtesting with realistic execution modeling. Regime detection (threshold + HMM). Statistical inference (PSR, MinTRL, FDR). Bias guards for lookahead leakage and overfitting.
+**[backtest-lab](https://github.com/bdschi1/backtest-lab)** — Event-driven backtesting for L/S equity strategies. Execution realism, risk management, bias prevention (lookahead and overfitting guards). Polars + Pydantic + yfinance.
 
 **investment-research-rag** *(private)* — Document ingestion and retrieval for SEC filings, earnings transcripts, equity research. Hybrid search (dense + BM25/RRF), cross-encoder reranking, citation traceability. 1,000+ tests.
+
+**knowledge-base** *(private)* — RAG pipeline for financial/research documents. PDF/DOCX/XLSX parsing, boilerplate-aware chunking, multi-provider embeddings, ChromaDB vector store.
 
 **fund-tracker-13f** *(private)* — Institutional holdings analysis from SEC 13F filings.
 
@@ -51,7 +55,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 **[financial-data-providers](https://github.com/bdschi1/financial-data-providers)** — Shared market data provider package with adapter pattern. Yahoo, Bloomberg, IBKR. Used by MAIC, backtest-lab, ls-portfolio-lab.
 
-**sec-financial-model-builder** *(private)* — Builds professional-grade Excel financial models from SEC EDGAR XBRL data. LLM-assisted concept mapping and narrative generation (Anthropic/Gemini). 1,290+ tests.
+**sec-financial-model-builder** *(private)* — Excel financial models built from SEC EDGAR XBRL data. LLM-assisted concept mapping and narrative generation (Anthropic/Gemini). 2,500+ tests.
 
 **investment-research-toolkit** *(private)* — Claude plugin for institutional investment research — 8 skills, 8 commands, 11 MCP data connectors. Orchestration layer across the repo ecosystem.
 
@@ -61,7 +65,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 
 ## How the Repos Relate
 
-![Tier 1 Repository Ecosystem](tier1_repo_ecosystem.svg)
+![Tier 1 Repository Ecosystem](tier1_repo_ecosystem.png)
 
 
 ## Applied AI Evaluation & Alignment
@@ -69,7 +73,7 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 #### Evaluation Methodology
 * **Methods:** RLHF preference data; adversarial red teaming; guardrail/safety taxonomy testing.
 * **Infrastructure:** Scoring rubrics; golden answer authoring; domain-specific fine-tuning (SFT).
-* **Benchmarking:** 306-problem finance reasoning benchmark with difficulty grading and multi-model leaderboard; institutional workflow evals covering thesis → sizing → risk → monitoring → post-mortem.
+* **Benchmarking:** 360-problem finance reasoning benchmark with difficulty grading and multi-model leaderboard; institutional workflow evals covering thesis → sizing → risk → monitoring → post-mortem.
 * **Model Audit:** Graph-based structural auditing of LLM-generated Excel models — dependency tracing, circular reference detection, balance sheet consistency.
 * **Population Diagnostics:** Heuristic-collapse audits — measuring whether agent populations converge to homogeneous decision profiles under realistic stress, separating individual model variance from system-level monoculture.
 
@@ -88,9 +92,9 @@ Evaluating and improving LLM performance on financial reasoning tasks — buildi
 ## AI Safety & Strategic Risk
 
 * **Red Teaming:** Multi-turn escalation sequences testing safety beyond first-refusal holds. Hypothesis-driven with full conversation path reproducibility.
-* **Guardrails:** Evaluating deterministic filters, semantic classifiers, and system prompt constraints.
-* **Purple Teaming:** Translating red team findings into refined safety taxonomies and targeted SFT/RLHF updates.
-* **Dual-Use Risk:** Calibrating harm severity in financial contexts — distinguishing legitimate analysis from manipulation facilitation.
+* **Guardrails:** Evaluation of deterministic filters, semantic classifiers, and system prompt constraints.
+* **Purple Teaming:** Translation of red team findings into refined safety taxonomies and targeted SFT/RLHF updates.
+* **Dual-Use Risk:** Calibration of harm severity in financial contexts — distinguishing legitimate analysis from manipulation facilitation.
 * **Decision Diversity:** Paper-grounded diagnostics for detecting heuristic collapse in multi-agent committees — a financial-domain analogue to model-monoculture risk in deployed AI systems.
 
 ---
@@ -140,7 +144,6 @@ Claude (Anthropic) is the preferred model across all LLM-integrated repos. Multi
 #### Mental Models & Philosophy
 * **Chivers, Tom.** 2024. *Everything Is Predictable: How Bayesian Statistics Explain Our World*.
 * **Cromwell, David.** n.d. *Richard Feynman's Mental Models*.
-* **Dylan, Bob.** *Thematic evolution and narrative complexity.*
 * **Weir, Bob.** *Improvisational theory and structural interplay.*
 
 ---

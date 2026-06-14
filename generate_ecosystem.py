@@ -19,17 +19,17 @@ BOX_H   = 48
 BOX_R   = 5
 BOX_VGAP = 7
 
-# Colors — cream / neutral palette, black text
-PIPE   = "#C8BDAE"   # warm taupe — pipeline boxes
-EVAL   = "#A0937E"   # darker taupe — eval boxes
-DARK   = "#2A2A2A"   # near-black — foundation bar
-HDR_BG = "#E5DDD0"   # warm beige — stage headers
-TXT    = "#1A1A1A"   # black text everywhere
-LBL    = "#6B6358"   # muted brown — lane labels
-ARR    = "#B0A899"   # warm gray — arrows
-BG     = "#FAF8F4"   # cream background
-LTBG   = "#E5DDD0"   # foundation bar text
-BAND   = "#F2EBE0"   # alternating column band
+# Colors — slate dark palette, light text
+PIPE   = "#3A4A5A"   # slate blue — pipeline boxes
+EVAL   = "#5C4A3A"   # warm brown — eval boxes
+DARK   = "#C8BDAE"   # light taupe — foundation bar (inverted)
+HDR_BG = "#1E2530"   # dark slate — stage headers
+TXT    = "#E6EDF3"   # light text everywhere
+LBL    = "#8B949E"   # muted grey — lane labels
+ARR    = "#586069"   # slate grey — arrows
+BG     = "#0F1218"   # near-black background
+LTBG   = "#15191F"   # foundation bar text (dark on light bar)
+BAND   = "#161B22"   # alternating column band
 
 # Column geometry
 col_x  = [MARGIN + i * (COL_W + GAP) for i in range(4)]
@@ -58,19 +58,17 @@ pipeline = [
      ("multi-agent-investment-committee", True)],
 
     [("ls-portfolio-lab", False),
-     ("backtest-lab", False),
-     ("scenario-portfolio-generator", False)],
+     ("backtest-lab", False)],
 ]
 
 evals = [
     [("fin-reasoning-eval", False),
-     ("kiln-sample", False)],
+     ("kiln-sample", True)],
     [("investment-workflow-evals", False),
-     ("ai-finance-prompt-library", False)],
-    [("excel-model-eval", True),
+     ("ai-finance-prompt-library", True)],
+    [("excel-model-eval", False),
      ("institutional-investor-casebook", True)],
-    [("judgment-under-uncertainty-eval", False),
-     ("tasksmith-sample", False)],
+    [("judgment-under-uncertainty-eval", True)],
 ]
 
 
@@ -266,9 +264,45 @@ import os
 
 out_dir = os.path.dirname(os.path.abspath(__file__))
 out_svg = os.path.join(out_dir, "tier1_repo_ecosystem.svg")
+out_png = os.path.join(out_dir, "tier1_repo_ecosystem.png")
 
 with open(out_svg, "w") as f:
     f.write("\n".join(svg))
 
 print(f"Generated: {out_svg}")
 print(f"Canvas: {W}x{H}, content ends: ~{LY + 30}px")
+
+
+# Render PNG at 2x (best-effort: rsvg-convert → cairosvg → qlmanage)
+def render_png():
+    import shutil
+    import subprocess
+
+    if shutil.which("rsvg-convert"):
+        subprocess.run(
+            ["rsvg-convert", "-w", str(W * 2), "-o", out_png, out_svg], check=True
+        )
+        return "rsvg-convert"
+    try:
+        import cairosvg
+
+        cairosvg.svg2png(url=out_svg, write_to=out_png, output_width=W * 2)
+        return "cairosvg"
+    except Exception:
+        pass
+    if shutil.which("qlmanage"):
+        subprocess.run(
+            ["qlmanage", "-t", "-s", str(W * 2), "-o", out_dir, out_svg],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        tmp = out_svg + ".png"
+        if os.path.exists(tmp):
+            os.replace(tmp, out_png)
+            return "qlmanage"
+    return None
+
+
+r = render_png()
+print(f"PNG: {out_png} ({r})" if r else "PNG: no SVG renderer found")
