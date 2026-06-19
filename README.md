@@ -27,9 +27,7 @@ Decomposing institutional investment workflow into evaluable, code-readable step
 
 **institutional-investor-casebook** *(private)* — Case studies testing institutional investment reasoning across strategies and market regimes.
 
-**kiln** *(private)* — Multi-pipeline toolchain for producing financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer files) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,200+ tests.
-
-**kiln-sample** *(private)* — Public-sanitized extract of the kiln eval platform: 52 activity types, 18 robustness checks, 11-phase pipeline, dual rubric/grader-model architecture.
+**kiln** *(private)* — Multi-pipeline toolchain for producing financial task packages. Generates evaluation materials (prompts, rubrics, templates, golden answer templates) for 52 activity types — DCFs, LBOs, three-statement models, comps, merger models, and more. Real SEC data first, analytics primitives before LLM review, self-grading quality loop with hallucination screening. 4,200+ tests.
 
 ### Decision & Risk
 
